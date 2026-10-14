@@ -1,0 +1,482 @@
+/* =========================================================
+   Treasure Client — landing page styles
+   Theme: warm near-black background, gold accents,
+   pixel-font branding inspired by the in-game title screen.
+   ========================================================= */
+
+:root {
+    /* Core palette */
+    --bg:          #140f08;   /* deep warm brown-black */
+    --bg-2:        #1c1509;   /* slightly lighter panel */
+    --bg-3:        #241a0c;   /* card surface */
+    --border:      #3a2c12;   /* subtle warm border */
+
+    /* Gold accents */
+    --gold:        #f5c542;   /* primary gold */
+    --gold-bright: #ffe08a;   /* highlight */
+    --gold-deep:   #c89b2c;   /* shadow / pressed */
+    --gold-glow:   rgba(245, 197, 66, 0.35);
+
+    /* Text */
+    --text:        #f3e9d2;
+    --text-dim:    #b7a989;
+    --text-faint:  #7d7055;
+
+    /* Fonts */
+    --font-pixel:  'Press Start 2P', monospace;
+    --font-body:   'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+    /* Layout */
+    --maxw: 1080px;
+    --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    color: var(--text);
+    background:
+        radial-gradient(1200px 700px at 50% -10%, #2a1f0d 0%, transparent 60%),
+        linear-gradient(180deg, #140f08 0%, #0e0a05 100%);
+    background-attachment: fixed;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a { color: var(--gold); text-decoration: none; transition: color .18s ease; }
+a:hover { color: var(--gold-bright); }
+
+img { max-width: 100%; display: block; }
+
+/* ---------------------------------------------------------
+   Gold star field (the little particles in the screenshot)
+   --------------------------------------------------------- */
+.starfield {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, var(--gold) 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 70% 20%, var(--gold-bright) 50%, transparent 51%),
+        radial-gradient(1px 1px   at 40% 70%, var(--gold-deep) 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 85% 60%, var(--gold) 50%, transparent 51%),
+        radial-gradient(1px 1px   at 10% 80%, var(--gold-bright) 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 55% 45%, var(--gold-deep) 50%, transparent 51%),
+        radial-gradient(1px 1px   at 90% 15%, var(--gold) 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 30% 90%, var(--gold-bright) 50%, transparent 51%),
+        radial-gradient(1px 1px   at 65% 85%, var(--gold-deep) 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 5% 50%, var(--gold) 50%, transparent 51%);
+    background-size: 100% 100%;
+    opacity: .5;
+    animation: twinkle 6s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: .30; }
+    to   { opacity: .60; }
+}
+
+/* ---------------------------------------------------------
+   Navigation
+   --------------------------------------------------------- */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem clamp(1rem, 4vw, 2.5rem);
+    background: rgba(20, 15, 8, 0.78);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text);
+}
+
+.nav__brand-mark {
+    font-family: var(--font-pixel);
+    font-size: 1rem;
+    color: var(--bg);
+    background: linear-gradient(180deg, var(--gold-bright), var(--gold-deep));
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    box-shadow: 0 0 14px var(--gold-glow);
+}
+
+.nav__brand-text {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    font-size: 1.1rem;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.8rem, 2.5vw, 1.8rem);
+}
+
+.nav__links a { color: var(--text-dim); font-weight: 500; font-size: 0.95rem; }
+.nav__links a:hover { color: var(--gold-bright); }
+
+.nav__cta {
+    padding: 0.5rem 1.1rem;
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    color: var(--gold) !important;
+    font-weight: 600;
+}
+.nav__cta:hover {
+    background: var(--gold);
+    color: var(--bg) !important;
+    box-shadow: 0 0 16px var(--gold-glow);
+}
+
+/* ---------------------------------------------------------
+   Shared containers & section headings
+   --------------------------------------------------------- */
+main { position: relative; z-index: 1; }
+
+section {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 4vw, 2rem);
+}
+
+.section-title {
+    font-family: var(--font-pixel);
+    font-size: clamp(1rem, 3.5vw, 1.6rem);
+    color: var(--gold);
+    text-align: center;
+    margin: 0 0 0.75rem;
+    text-shadow: 0 2px 0 var(--gold-deep), 0 0 20px var(--gold-glow);
+    line-height: 1.5;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-dim);
+    margin: 0 auto 2.5rem;
+    max-width: 48ch;
+}
+
+/* ---------------------------------------------------------
+   Hero
+   --------------------------------------------------------- */
+.hero {
+    text-align: center;
+    padding-top: clamp(3rem, 10vw, 7rem);
+    padding-bottom: clamp(3rem, 8vw, 6rem);
+}
+
+.hero__eyebrow {
+    font-family: var(--font-pixel);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    margin: 0 0 1.8rem;
+}
+
+.hero__logo {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-pixel);
+    line-height: 1;
+}
+
+.hero__logo-main {
+    font-size: clamp(2.2rem, 11vw, 5.5rem);
+    color: var(--gold);
+    letter-spacing: 0.02em;
+    /* layered shadow gives the chunky pixel-title look */
+    text-shadow:
+        0 3px 0 var(--gold-deep),
+        0 6px 0 #7a5e18,
+        0 0 30px var(--gold-glow);
+}
+
+.hero__logo-sub {
+    font-size: clamp(0.9rem, 4.5vw, 2rem);
+    color: var(--gold-bright);
+    letter-spacing: 0.4em;
+    padding-left: 0.4em; /* optically center the wide tracking */
+    text-shadow: 0 2px 0 var(--gold-deep);
+}
+
+.hero__tagline {
+    font-family: var(--font-pixel);
+    font-size: clamp(0.65rem, 2.5vw, 1rem);
+    color: var(--gold-bright);
+    margin: 1.6rem 0 0;
+    text-shadow: 0 0 16px var(--gold-glow);
+}
+
+.hero__lead {
+    max-width: 52ch;
+    margin: 1.4rem auto 0;
+    color: var(--text-dim);
+    font-size: 1.05rem;
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2.2rem 0 0;
+}
+
+.hero__version {
+    margin-top: 2.5rem;
+    color: var(--text-faint);
+    font-size: 0.85rem;
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+}
+
+/* ---------------------------------------------------------
+   Buttons — Minecraft-style bordered panels with gold edges
+   --------------------------------------------------------- */
+.btn {
+    --btn-border: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: var(--radius);
+    border: 2px solid var(--btn-border);
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+    letter-spacing: 0.02em;
+}
+
+.btn--lg { padding: 1rem 2rem; font-size: 1.05rem; }
+
+.btn--primary {
+    background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold) 55%, var(--gold-deep) 100%);
+    color: #2a1d02;
+    border-color: var(--gold-bright);
+    box-shadow: 0 4px 0 var(--gold-deep), 0 0 22px var(--gold-glow);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 var(--gold-deep), 0 0 30px var(--gold-glow);
+    color: #2a1d02;
+}
+.btn--primary:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 var(--gold-deep), 0 0 18px var(--gold-glow);
+}
+
+.btn--ghost {
+    background: rgba(245, 197, 66, 0.05);
+    color: var(--gold);
+    border-color: var(--border);
+}
+.btn--ghost:hover {
+    border-color: var(--gold);
+    background: rgba(245, 197, 66, 0.12);
+    color: var(--gold-bright);
+    box-shadow: 0 0 18px var(--gold-glow);
+    transform: translateY(-2px);
+}
+
+.btn[aria-disabled="true"] { opacity: 0.85; }
+
+/* ---------------------------------------------------------
+   Features
+   --------------------------------------------------------- */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.2rem;
+}
+
+.feature-card {
+    background: linear-gradient(180deg, var(--bg-3), var(--bg-2));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.6rem;
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 22px var(--gold-glow);
+}
+
+.feature-card__icon {
+    font-size: 1.8rem;
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: rgba(245, 197, 66, 0.08);
+    border: 1px solid var(--border);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--gold);
+    font-size: 1.15rem;
+}
+
+.feature-card p {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+}
+
+/* ---------------------------------------------------------
+   Download / CTA panel
+   --------------------------------------------------------- */
+.download__panel {
+    background:
+        radial-gradient(600px 240px at 50% 0%, rgba(245, 197, 66, 0.10), transparent 70%),
+        linear-gradient(180deg, var(--bg-3), var(--bg-2));
+    border: 1px solid var(--gold-deep);
+    border-radius: 16px;
+    padding: clamp(2rem, 6vw, 3.5rem);
+    text-align: center;
+    box-shadow: 0 0 40px rgba(245, 197, 66, 0.08);
+}
+
+.download__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.download__note {
+    margin: 1.5rem 0 0;
+    color: var(--text-faint);
+    font-size: 0.85rem;
+}
+
+/* ---------------------------------------------------------
+   FAQ
+   --------------------------------------------------------- */
+.faq__list {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.faq__item {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color .18s ease;
+}
+.faq__item[open] { border-color: var(--gold-deep); }
+
+.faq__item summary {
+    cursor: pointer;
+    padding: 1rem 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after {
+    content: "+";
+    color: var(--gold);
+    font-size: 1.3rem;
+    line-height: 1;
+    transition: transform .2s ease;
+}
+.faq__item[open] summary::after { transform: rotate(45deg); }
+.faq__item summary:hover { color: var(--gold-bright); }
+
+.faq__item p {
+    margin: 0;
+    padding: 0 1.2rem 1.1rem;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+}
+
+/* ---------------------------------------------------------
+   Footer
+   --------------------------------------------------------- */
+.footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2.5rem 1rem 3rem;
+    border-top: 1px solid var(--border);
+    background: rgba(14, 10, 5, 0.6);
+}
+
+.footer__brand {
+    font-family: var(--font-pixel);
+    color: var(--gold);
+    font-size: 0.9rem;
+    margin: 0 0 0.5rem;
+    text-shadow: 0 0 16px var(--gold-glow);
+}
+
+.footer__note {
+    color: var(--text-faint);
+    font-size: 0.85rem;
+    margin: 0 0 0.75rem;
+}
+
+.footer__links {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-faint);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------
+   Responsive tweaks
+   --------------------------------------------------------- */
+@media (max-width: 640px) {
+    .nav__links a:not(.nav__cta) { display: none; }
+    .hero__logo-sub { letter-spacing: 0.25em; padding-left: 0.25em; }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .starfield { animation: none; }
+    html { scroll-behavior: auto; }
+    .btn, .feature-card { transition: none; }
+}
