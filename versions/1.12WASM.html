@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+
+
+
+<!--
+
+This file is from 10/07/2026
+
+Be aware that some server owners are lazy and do not update their client regularly
+
+This is the WASM-GC version of Eaglercraft 1.12 and may not be compatible with outdated browsers
+
+-->
+
+
+
+
+
+
+
+
+<html style="width:100%;height:100%;background-color:black;">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="description" content="Eaglercraft 1.12 WASM-GC Offline" />
+<meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.12, 1.12.2" />
+<title>EaglercraftX 1.12 WASM-GC</title>
+<meta property="og:locale" content="en-US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Eaglercraft 1.12 WASM-GC Offline" />
+<meta property="og:description" content="this file is not a website, whoever uploaded it to this URL is a dumbass" />
+<script type="text/javascript">
+"use strict";
+var relayId = Math.floor(Math.random() * 3);
+
+// %%%%%%%%% launch options %%%%%%%%%%%%
+
+window.eaglercraftXOpts = {
+	container: "game_frame",
+	worldsDB: "worlds",
+	relays: [
+		{ addr: "wss://relay.deev.is/", comment: "lax1dude relay #1", primary: relayId == 0 },
+		{ addr: "wss://relay.lax1dude.net/", comment: "lax1dude relay #2", primary: relayId == 1 },
+		{ addr: "wss://relay.shhnowisnottheti.me/", comment: "ayunami relay #1", primary: relayId == 2 }
+	]
+};
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+</script>
+<script type="text/javascript">
+"use strict";
+if(typeof window !== "undefined") window.eaglercraftXClientScriptElement = document.currentScript;
+(function(){'use strict';function g(a){console.log("LoaderBootstrap: [INFO] "+a)}function n(a){console.log("LoaderBootstrap: [WARN] "+a)}function q(a){console.error("LoaderBootstrap: [ERROR] "+a)}var [...]
+function u(){const a=[];for(var c=0;64>c;++c)a["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".charCodeAt(c)]=c;a[45]=62;a[95]=63;return function(b,d){var e=b.length-d;if(0<e%4)thro[...]
+3)],f[h++]=d>>16&255,f[h++]=d>>8&255,f[h++]=d&255;2===e?(d=a[b.charCodeAt(k)]<<2|a[b.charCodeAt(k+1)]>>4,f[h++]=d&255):1===e&&(d=a[b.charCodeAt(k)]<<10|a[b.charCodeAt(k+1)]<<4|a[b.charCodeAt(k+2)]>>2,[...]
+function w(a){return new Promise(function(c){const b=new Image;b.addEventListener("load",c);b.addEventListener("error",function(){n("Failed to preload image: "+a);c()});b.src=a;setTimeout(c,50)})}func[...]
+function y(a){return a.startsWith("data:application/octet-stream;base64,")?new Promise(function(c){x(a).then(function(b){if(b)c(b);else{n("Failed to decode base64 via fetch, doing it the slow way inst[...]
+function z(a,c){const b=document.createElement("h2");b.style.color="#AA0000";b.style.padding="25px";b.style.fontFamily="sans-serif";b.style.marginBlock="0px";b.appendChild(document.createTextNode(c));[...]
+window.main=async function(){if("undefined"===typeof window.eaglercraftXOpts)q("window.eaglercraftXOpts is not defined!"),alert("window.eaglercraftXOpts is not defined!");else{var a=window.eaglercraft[...]
+else{q("window.eaglercraftXOpts.assetsURI is not a string!");alert("window.eaglercraftXOpts.assetsURI is not a string!");return}c.startsWith("data:")&&delete window.eaglercraftXOpts.assetsURI;var b=do[...]
+b.appendChild(a);await v();c.startsWith("data:")?(g('Downloading EPW file "<data: '+c.length+' chars>"...'),c=await y(c)):(g('Downloading EPW file "'+c+'"...'),c=await x(c));var d=!1;c?384>c.byteLengt[...]
+!0)!==f&&(q("The EPW file is the wrong length"),d=!0);if(d)b.removeChild(a),z(b,"EPW file is invalid!"),q("EPW file is invalid!");else{var l=new TextDecoder("utf-8"),h=e.getUint32(100,!0),k=e.getUint3[...]
+{type:l.decode(m)}));await w(l);g("Loaded splash img: "+l);a.style.background='center / contain no-repeat url("'+l+'"), 0px 0px / 1000000% 1000000% no-repeat url("'+l+'") white';await v();p=e.getUint3[...]
+{type:"text/javascript;charset=utf-8"}));g("Loaded loader.js: "+l);d=new Uint8Array(c,m,e);d=URL.createObjectURL(new Blob([d],{type:"application/wasm"}));g("Loaded loader.wasm: "+d);f={};for(const [t,[...]
+b.src=a;document.head.appendChild(b)}}}}}else b='window.eaglercraftXOpts.container "'+a+'" is not a known element id!',q(b),alert(b)}}};}).call(this);
+
+</script>
+<script type="text/javascript">
+"use strict";
+(function(){
+	window.eaglercraftXOpts.assetsURI = "data:application/octet-stream;base64,RUFHJFdBU03YwAABGiV1pAEAAQAAAAAAgAEAACQAAAClAQAACwAAALEBAAACAAAAtAEAAA4AAAClAQAACwAAALEBAAACAAAAtAEAAA4AAACAAQAAAAAAAHDy2RahA[...]
+
+</script>
+
+
