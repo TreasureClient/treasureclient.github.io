@@ -33,7 +33,7 @@
             <a href="#features">Features</a>
             <a href="#faq">FAQ</a>
             <a href="https://github.com/TreasureClient/treasureclient.github.io/blob/main/changelog.md" target="_blank" rel="noopener">Changelog</a>
-            <a class="nav__cta" href="versions/1.12WASM.html">Play</a>
+            <a class="nav__cta" href="#play">Play</a>
         </nav>
     </header>
 
@@ -50,35 +50,17 @@
             </p>
 
             <div class="get">
-                <div class="get__group">
-                    <p class="get__label">Play in your browser</p>
-                    <div class="get__buttons">
-                        <a class="btn btn--primary" href="versions/1.12WASM.html">Play (WASM)</a>
-                        <a class="btn btn--ghost" href="versions/1.12JS.html">Play (JS)</a>
-                    </div>
-                    <div class="get__beta">
-                        <span class="badge">Beta</span>
-                        <a class="btn btn--ghost btn--sm" id="beta-wasm" href="https://treasureclient.github.io/Treasure-Client-1.12-src/">Play <span class="beta-version">1.3 Beta</span> (WASM)</a>
-                        <a class="btn btn--ghost btn--sm" id="beta-js" href="https://treasureclient.github.io/Treasure-Client-1.12-src/js.html">Play <span class="beta-version">1.3 Beta</span> (JS)</a>
-                    </div>
-                    <p class="get__beta-note">The newest version before its release. May have bugs.</p>
-                </div>
-                <div class="get__group">
-                    <p class="get__label">Download to play offline</p>
-                    <div class="get__buttons">
-                        <a class="btn btn--primary" id="dl-wasm" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_WASM.html">Download WASM</a>
-                        <a class="btn btn--ghost" id="dl-js" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_JS.html">Download JS</a>
-                    </div>
+                <div class="get__buttons">
+                    <a class="btn btn--primary btn--lg" href="#play">Play</a>
+                    <a class="btn btn--ghost btn--lg" href="#download">Download</a>
                 </div>
             </div>
 
             <p class="get__note">
-                <span id="release-name">Version 1.2</span> ·
                 <a href="https://github.com/TreasureClient/treasureclient.github.io/blob/main/changelog.md" target="_blank" rel="noopener">Changelog</a> ·
                 <a href="https://github.com/TreasureClient/treasureclient.github.io/releases" target="_blank" rel="noopener">All releases</a> ·
                 <a href="https://github.com/TreasureClient/Treasure-Client-1.12-src" target="_blank" rel="noopener">Source code</a>
             </p>
-            <p class="get__hint">WASM is faster. Use JS if WASM doesn't load on your device.</p>
         </section>
 
         <section class="shot">
@@ -88,6 +70,54 @@
                     <img src="images/main-menu-1.2.jpg" width="1920" height="1200" alt="Treasure Client 1.2 main menu">
                 </picture>
             </figure>
+        </section>
+
+        <section class="versions-section" id="play">
+            <h2 class="section-title">Play</h2>
+            <p class="section-subtitle">Play right in your browser. WASM is faster. Use JS if WASM doesn't load on your device.</p>
+            <div class="versions">
+                <article class="version-card">
+                    <p class="version-card__kind">Latest release</p>
+                    <h3 class="version-card__name">Version <span class="release-version">1.2</span></h3>
+                    <div class="version-card__buttons">
+                        <a class="btn btn--primary" href="versions/1.12WASM.html">Play WASM</a>
+                        <a class="btn btn--ghost" href="versions/1.12JS.html">Play JS</a>
+                    </div>
+                </article>
+                <article class="version-card version-card--beta">
+                    <p class="version-card__kind"><span class="badge">Beta</span></p>
+                    <h3 class="version-card__name">Version <span class="beta-version">1.3 Beta</span></h3>
+                    <div class="version-card__buttons">
+                        <a class="btn btn--primary" href="https://treasureclient.github.io/Treasure-Client-1.12-src/">Play WASM</a>
+                        <a class="btn btn--ghost" href="https://treasureclient.github.io/Treasure-Client-1.12-src/js.html">Play JS</a>
+                    </div>
+                    <p class="version-card__note">The newest version before its release. May have bugs.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="versions-section" id="download">
+            <h2 class="section-title">Download</h2>
+            <p class="section-subtitle">Download a single .html file and open it in your browser anytime, even offline.</p>
+            <div class="versions">
+                <article class="version-card">
+                    <p class="version-card__kind">Latest release</p>
+                    <h3 class="version-card__name">Version <span class="release-version">1.2</span></h3>
+                    <div class="version-card__buttons">
+                        <a class="btn btn--primary" id="dl-wasm" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_WASM.html">Download WASM</a>
+                        <a class="btn btn--ghost" id="dl-js" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_JS.html">Download JS</a>
+                    </div>
+                </article>
+                <article class="version-card version-card--beta">
+                    <p class="version-card__kind"><span class="badge">Beta</span></p>
+                    <h3 class="version-card__name">Version <span class="beta-version">1.3 Beta</span></h3>
+                    <div class="version-card__buttons">
+                        <a class="btn btn--primary" id="dl-beta-wasm" href="https://treasureclient.github.io/Treasure-Client-1.12-src/wasm.html" download="Treasure-Client_Beta_WASM.html">Download WASM</a>
+                        <a class="btn btn--ghost" id="dl-beta-js" href="https://treasureclient.github.io/Treasure-Client-1.12-src/js.html" download="Treasure-Client_Beta_JS.html">Download JS</a>
+                    </div>
+                    <p class="version-card__note">Updated whenever new changes are ready. May have bugs.</p>
+                </article>
+            </div>
         </section>
 
         <section class="features" id="features">
@@ -130,7 +160,7 @@
                 </details>
                 <details class="faq__item">
                     <summary>How do I play offline?</summary>
-                    <p>Download the WASM or JS file above and open it in your browser. You don't need an internet connection for singleplayer.</p>
+                    <p>Download the WASM or JS file from the <a href="#download">Download</a> section and open it in your browser. You don't need an internet connection for singleplayer.</p>
                 </details>
                 <details class="faq__item">
                     <summary>Which servers can I join?</summary>
@@ -170,6 +200,9 @@
                 if (!info || !info.version) return;
                 var v = /beta/i.test(info.version) ? info.version : info.version + ' Beta';
                 document.querySelectorAll('.beta-version').forEach(function (el) { el.textContent = v; });
+                var file = 'Treasure-Client_' + v.replace(/\s+/g, '_');
+                document.getElementById('dl-beta-wasm').setAttribute('download', file + '_WASM.html');
+                document.getElementById('dl-beta-js').setAttribute('download', file + '_JS.html');
             })
             .catch(function () {});
 
@@ -192,7 +225,8 @@
                     }
                 });
                 if (rel.name) {
-                    document.getElementById('release-name').textContent = 'Version ' + rel.name;
+                    var name = rel.name.replace(/^v(ersion)?\s*/i, '');
+                    document.querySelectorAll('.release-version').forEach(function (el) { el.textContent = name; });
                 }
             })
             .catch(function () {});

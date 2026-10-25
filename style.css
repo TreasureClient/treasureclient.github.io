@@ -320,33 +320,11 @@ section {
     margin: 2.2rem auto 0;
 }
 
-.get__group { display: flex; flex-direction: column; align-items: center; gap: 0.7rem; }
-
-.get__label {
-    margin: 0;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-faint);
-}
-
 .get__buttons { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; }
 
-/* Beta builds: smaller buttons under Play */
-.btn--sm { padding: 0.5rem 1rem; font-size: 0.9rem; }
-
-.get__beta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 0.3rem;
-}
-
 .badge {
-    padding: 0.15rem 0.5rem;
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
     border-radius: 999px;
     background: var(--gold);
     color: #2a1d02;
@@ -356,22 +334,52 @@ section {
     text-transform: uppercase;
 }
 
-.get__beta-note {
-    margin: 0;
-    color: var(--text-faint);
-    font-size: 0.8rem;
+/* Play and Download sections: one card per version */
+section[id] { scroll-margin-top: 70px; }
+
+.versions-section .section-subtitle { margin-bottom: 2rem; }
+
+.versions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+    max-width: 820px;
+    margin: 0 auto;
 }
+
+.version-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-3), var(--bg-2));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.6rem;
+}
+.version-card--beta { border-style: dashed; border-color: var(--gold-deep); }
+
+.version-card__kind {
+    margin: 0;
+    min-height: 1.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+}
+
+.version-card__name { margin: 0; color: var(--text); font-size: 1.25rem; }
+
+.version-card__buttons { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; }
+
+.version-card__note { margin: 0; color: var(--text-faint); font-size: 0.85rem; }
 
 .get__note {
     margin: 1.8rem 0 0;
     color: var(--text-dim);
     font-size: 0.9rem;
-}
-
-.get__hint {
-    margin: 0.4rem 0 0;
-    color: var(--text-faint);
-    font-size: 0.85rem;
 }
 
 /* ---------------------------------------------------------
@@ -482,7 +490,7 @@ section {
     .nav__links a:not(.nav__cta) { display: none; }
     .nav__brand-text { font-size: 1rem; }
     .get__buttons .btn { flex: 1 1 100%; }
-    .get__beta .btn { flex: 1 1 100%; }
+    .version-card__buttons .btn { flex: 1 1 100%; }
     .hero__logo-sub { letter-spacing: 0.25em; padding-left: 0.25em; }
 }
 
