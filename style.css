@@ -107,16 +107,10 @@ img { max-width: 100%; display: block; }
 }
 
 .nav__brand-mark {
-    font-family: var(--font-pixel);
-    font-size: 1rem;
-    color: var(--bg);
-    background: linear-gradient(180deg, var(--gold-bright), var(--gold-deep));
-    width: 2rem;
-    height: 2rem;
-    display: grid;
-    place-items: center;
-    border-radius: 6px;
-    box-shadow: 0 0 14px var(--gold-glow);
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px var(--gold-glow));
 }
 
 .nav__brand-text {
