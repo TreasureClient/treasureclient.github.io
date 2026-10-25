@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treasure Client — Batten down the hatches!</title>
-    <meta name="description" content="Treasure Client — a sleek, feature-packed EaglerCraft client. Batten down the hatches and set sail.">
+    <title>Treasure Client · Eaglercraft 1.12.2</title>
+    <meta name="description" content="Treasure Client is a free Eaglercraft 1.12.2 client with a mod menu, themes, and modern items and blocks on newer servers. Play in your browser or download it.">
 
-    <!-- Open Graph / social preview -->
     <meta property="og:title" content="Treasure Client">
-    <meta property="og:description" content="A sleek, feature-packed EaglerCraft client. Batten down the hatches!">
+    <meta property="og:description" content="Free Eaglercraft 1.12.2 client with a mod menu, themes, and modern items and blocks on newer servers.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://treasureclient.github.io/images/main-menu-1.2.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,118 +17,157 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Animated gold star field -->
     <div class="starfield" aria-hidden="true"></div>
 
-    <!-- Navigation -->
     <header class="nav">
         <a href="#top" class="nav__brand">
             <span class="nav__brand-mark">T</span>
-            <span class="nav__brand-text">Treasure</span>
+            <span class="nav__brand-text">Treasure Client</span>
         </a>
         <nav class="nav__links" aria-label="Primary">
             <a href="#features">Features</a>
-            <a href="#download">Download</a>
             <a href="#faq">FAQ</a>
-            <a class="nav__cta" href="#download">Play Now</a>
+            <a href="https://github.com/TreasureClient/treasureclient.github.io/blob/main/changelog.md" target="_blank" rel="noopener">Changelog</a>
+            <a class="nav__cta" href="versions/1.12WASM.html">Play</a>
         </nav>
     </header>
 
-    <!-- Hero -->
     <main id="top">
         <section class="hero">
-            <p class="hero__eyebrow">EaglerCraft Client · 1.12.2</p>
             <h1 class="hero__logo">
                 <span class="hero__logo-main">TREASURE</span>
                 <span class="hero__logo-sub">CLIENT</span>
             </h1>
-            <p class="hero__tagline">Batten down the hatches!</p>
+            <p class="hero__tagline">Shiver me timbers!</p>
             <p class="hero__lead">
-                A sleek, performance-focused EaglerCraft client packed with mods,
-                a built-in mod menu, and all the tools you need to set sail.
+                A free Eaglercraft 1.12.2 client with a mod menu, themes, and modern
+                items and blocks on newer servers.
             </p>
-            <div class="hero__actions">
-                <a class="btn btn--primary" href="#download">Play Now</a>
-                <a class="btn btn--ghost" href="#features">Explore Features</a>
+
+            <div class="get">
+                <div class="get__group">
+                    <p class="get__label">Play in your browser</p>
+                    <div class="get__buttons">
+                        <a class="btn btn--primary" href="versions/1.12WASM.html">Play (WASM)</a>
+                        <a class="btn btn--ghost" href="versions/1.12JS.html">Play (JS)</a>
+                    </div>
+                </div>
+                <div class="get__group">
+                    <p class="get__label">Download to play offline</p>
+                    <div class="get__buttons">
+                        <a class="btn btn--primary" id="dl-wasm" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_WASM.html">Download WASM</a>
+                        <a class="btn btn--ghost" id="dl-js" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_JS.html">Download JS</a>
+                    </div>
+                </div>
             </div>
-            <p class="hero__version">Treasure Client 1.1 · Based on EaglerCraft 1.12.2</p>
+
+            <p class="get__note">
+                <span id="release-name">Version 1.2</span> ·
+                <a href="https://github.com/TreasureClient/treasureclient.github.io/blob/main/changelog.md" target="_blank" rel="noopener">Changelog</a> ·
+                <a href="https://github.com/TreasureClient/treasureclient.github.io/releases" target="_blank" rel="noopener">All releases</a>
+            </p>
+            <p class="get__hint">WASM is faster. Use JS if WASM doesn't load on your device.</p>
         </section>
 
-        <!-- Features -->
+        <section class="shot">
+            <figure class="shot__frame">
+                <picture>
+                    <source srcset="images/main-menu-1.2.webp" type="image/webp">
+                    <img src="images/main-menu-1.2.jpg" width="1920" height="1200" alt="Treasure Client 1.2 main menu">
+                </picture>
+            </figure>
+        </section>
+
         <section class="features" id="features">
-            <h2 class="section-title">Why Choose Treasure?</h2>
-            <p class="section-subtitle">BECAUSE I SAID SO!!!</p>
+            <h2 class="section-title">Features</h2>
 
             <div class="feature-grid">
                 <article class="feature-card">
-                    <div class="feature-card__icon">⚓</div>
-                    <h3>Built-in Mod Menu</h3>
-                    <p>Toggle client mods on the fly from a clean, in-game menu. No config files, no hassle.</p>
+                    <h3>Mod Menu</h3>
+                    <p>Turn mods on and off and change their settings in game. Includes Zoom, Toggle Sprint, Toggle Sneak, No Hurt Cam, TNT Timer, Low Fire, Low Shield, Small Totem, Fullbright, Hitboxes, a custom crosshair and more.</p>
                 </article>
                 <article class="feature-card">
-                    <div class="feature-card__icon">🗺️</div>
-                    <h3>Multiplayer Ready</h3>
-                    <p>Jump straight into servers with a polished multiplayer browser and quick-join support.</p>
+                    <h3>HUD Editor</h3>
+                    <p>Drag the FPS counter, CPS counter, ping display and other HUD mods wherever you want them on screen.</p>
                 </article>
                 <article class="feature-card">
-                    <div class="feature-card__icon">🎨</div>
-                    <h3>Custom Profiles</h3>
-                    <p>Edit your profile, skins, and look. Make your pirate truly your own.</p>
+                    <h3>Themes</h3>
+                    <p>Five themes: Treasure, Frost, Tropical, Terracotta and Forest. Each one changes the menus and the background.</p>
                 </article>
                 <article class="feature-card">
-                    <div class="feature-card__icon">🧭</div>
-                    <h3>Quality-of-Life Tweaks</h3>
-                    <p>Thoughtful settings and shortcuts that make every voyage a little bit smoother.</p>
+                    <h3>Modern Items and Blocks</h3>
+                    <p>On newer servers, items like spears, maces and wind charges show up as the real thing instead of old stand-ins. Spears work, and modern blocks show up on servers with TuffX+.</p>
                 </article>
                 <article class="feature-card">
-                    <div class="feature-card__icon">💰</div>
-                    <h3>Always Free</h3>
-                    <p>No paywalls, no accounts required. Open the page and jump into a new blocky world.</p>
+                    <h3>Updated Textures</h3>
+                    <p>Blocks, items and potions use their current textures and colors from the newest Minecraft.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>No Install</h3>
+                    <p>Play right here in the browser, or download a single .html file and open it anytime, even offline.</p>
                 </article>
             </div>
         </section>
 
-        <!-- Download / CTA -->
-        <section class="download" id="download">
-            <div class="download__panel">
-                <h2 class="section-title">Set sail</h2>
-                <p class="section-subtitle">Launch the client right in your browser — no install needed.</p>
-                <div class="download__actions">
-                    <a href="launchmenu.html">Launch Treasure Client</a>
-                    <a class="btn btn--ghost btn--lg" href="launchmenu.html" target="_blank" rel="noopener">View on GitHub</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
         <section class="faq" id="faq">
             <h2 class="section-title">FAQ</h2>
             <div class="faq__list">
                 <details class="faq__item">
-                    <summary>What is Treasure Client?</summary>
-                    <p>Treasure Client is a custom EaglerCraft client — a browser-based build of Minecraft 1.12.2 with extra mods and a built-in mod menu.</p>
+                    <summary>Should I use WASM or JS?</summary>
+                    <p>Use WASM. It runs a lot faster. The JS version is there for older browsers and devices where WASM doesn't load.</p>
+                </details>
+                <details class="faq__item">
+                    <summary>How do I play offline?</summary>
+                    <p>Download the WASM or JS file above and open it in your browser. You don't need an internet connection for singleplayer.</p>
+                </details>
+                <details class="faq__item">
+                    <summary>Which servers can I join?</summary>
+                    <p>Any Eaglercraft 1.12 server. Modern items and spears need a newer server running ViaVersion, and modern blocks need a server with the TuffX+ plugin.</p>
                 </details>
                 <details class="faq__item">
                     <summary>Is it free?</summary>
-                    <p>Yes, completely free. There are no paywalls and no account is required.</p>
-                </details>
-                <details class="faq__item">
-                    <summary>Which version is it based on?</summary>
-                    <p>The current release (1.1) is based on EaglerCraft 1.12.2.</p>
+                    <p>Yes. No account or payment needed.</p>
                 </details>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <p class="footer__brand">Treasure Client</p>
-        <p class="footer__note">Batten down the hatches! · Not affiliated with Mojang or Microsoft.</p>
+        <p class="footer__note">Not affiliated with Mojang or Microsoft.</p>
         <p class="footer__links">
-            <a href="https://github.com/treasureclient/treasureclient.github.io" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/TreasureClient/treasureclient.github.io" target="_blank" rel="noopener">GitHub</a>
+            <span>·</span>
+            <a href="https://github.com/TreasureClient/treasureclient.github.io/releases" target="_blank" rel="noopener">Releases</a>
             <span>·</span>
             <a href="#top">Back to top</a>
         </p>
     </footer>
+
+    <script>
+        // Point the download buttons at the files in the latest GitHub release.
+        // The links above are a fallback if GitHub can't be reached.
+        fetch('https://api.github.com/repos/TreasureClient/treasureclient.github.io/releases/latest')
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (rel) {
+                if (!rel || !rel.assets) return;
+                rel.assets.forEach(function (a) {
+                    var mb = ' (' + Math.round(a.size / 1048576) + ' MB)';
+                    if (/wasm/i.test(a.name)) {
+                        var w = document.getElementById('dl-wasm');
+                        w.href = a.browser_download_url;
+                        w.textContent = 'Download WASM' + mb;
+                    } else if (/js\.html$/i.test(a.name)) {
+                        var j = document.getElementById('dl-js');
+                        j.href = a.browser_download_url;
+                        j.textContent = 'Download JS' + mb;
+                    }
+                });
+                if (rel.name) {
+                    document.getElementById('release-name').textContent = 'Version ' + rel.name;
+                }
+            })
+            .catch(function () {});
+    </script>
 </body>
 </html>

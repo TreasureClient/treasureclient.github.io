@@ -33,7 +33,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: #0e0a05; }
 
 body {
     margin: 0;
@@ -163,7 +163,7 @@ section {
     font-size: clamp(1rem, 3.5vw, 1.6rem);
     color: var(--gold);
     text-align: center;
-    margin: 0 0 0.75rem;
+    margin: 0 0 2rem;
     text-shadow: 0 2px 0 var(--gold-deep), 0 0 20px var(--gold-glow);
     line-height: 1.5;
 }
@@ -180,17 +180,8 @@ section {
    --------------------------------------------------------- */
 .hero {
     text-align: center;
-    padding-top: clamp(3rem, 10vw, 7rem);
-    padding-bottom: clamp(3rem, 8vw, 6rem);
-}
-
-.hero__eyebrow {
-    font-family: var(--font-pixel);
-    font-size: 0.62rem;
-    letter-spacing: 0.12em;
-    color: var(--text-faint);
-    text-transform: uppercase;
-    margin: 0 0 1.8rem;
+    padding-top: clamp(2.5rem, 7vw, 4.5rem);
+    padding-bottom: clamp(2rem, 5vw, 3rem);
 }
 
 .hero__logo {
@@ -235,23 +226,6 @@ section {
     margin: 1.4rem auto 0;
     color: var(--text-dim);
     font-size: 1.05rem;
-}
-
-.hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin: 2.2rem 0 0;
-}
-
-.hero__version {
-    margin-top: 2.5rem;
-    color: var(--text-faint);
-    font-size: 0.85rem;
-    font-family: var(--font-pixel);
-    font-size: 0.55rem;
-    letter-spacing: 0.08em;
 }
 
 /* ---------------------------------------------------------
@@ -329,18 +303,6 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 22px var(--gold-glow);
 }
 
-.feature-card__icon {
-    font-size: 1.8rem;
-    width: 3rem;
-    height: 3rem;
-    display: grid;
-    place-items: center;
-    border-radius: 8px;
-    background: rgba(245, 197, 66, 0.08);
-    border: 1px solid var(--border);
-    margin-bottom: 1rem;
-}
-
 .feature-card h3 {
     margin: 0 0 0.5rem;
     color: var(--gold);
@@ -354,32 +316,56 @@ section {
 }
 
 /* ---------------------------------------------------------
-   Download / CTA panel
+   Play / download buttons (top of the page)
    --------------------------------------------------------- */
-.download__panel {
-    background:
-        radial-gradient(600px 240px at 50% 0%, rgba(245, 197, 66, 0.10), transparent 70%),
-        linear-gradient(180deg, var(--bg-3), var(--bg-2));
-    border: 1px solid var(--gold-deep);
-    border-radius: 16px;
-    padding: clamp(2rem, 6vw, 3.5rem);
-    text-align: center;
-    box-shadow: 0 0 40px rgba(245, 197, 66, 0.08);
-}
-
-.download__actions {
+.get {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     justify-content: center;
-    margin-top: 0.5rem;
+    gap: 1.2rem 2.5rem;
+    margin: 2.2rem auto 0;
 }
 
-.download__note {
-    margin: 1.5rem 0 0;
+.get__group { display: flex; flex-direction: column; align-items: center; gap: 0.7rem; }
+
+.get__label {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+}
+
+.get__buttons { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; }
+
+.get__note {
+    margin: 1.8rem 0 0;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+.get__hint {
+    margin: 0.4rem 0 0;
     color: var(--text-faint);
     font-size: 0.85rem;
 }
+
+/* ---------------------------------------------------------
+   Screenshot
+   --------------------------------------------------------- */
+.shot { padding-top: 0; }
+
+.shot__frame {
+    margin: 0;
+    border: 2px solid var(--gold-deep);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--bg-2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(245, 197, 66, 0.10);
+}
+
+.shot__frame img { width: 100%; height: auto; }
 
 /* ---------------------------------------------------------
    FAQ
@@ -471,6 +457,8 @@ section {
    --------------------------------------------------------- */
 @media (max-width: 640px) {
     .nav__links a:not(.nav__cta) { display: none; }
+    .nav__brand-text { font-size: 1rem; }
+    .get__buttons .btn { flex: 1 1 100%; }
     .hero__logo-sub { letter-spacing: 0.25em; padding-left: 0.25em; }
 }
 
