@@ -358,6 +358,8 @@ section[id] { scroll-margin-top: 70px; }
     border-radius: var(--radius);
     padding: 1.6rem;
 }
+.versions--single { grid-template-columns: minmax(0, 420px); justify-content: center; }
+
 .version-card--beta { border-style: dashed; border-color: var(--gold-deep); }
 
 .version-card__kind {

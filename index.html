@@ -99,7 +99,7 @@
         <section class="versions-section" id="download">
             <h2 class="section-title">Download</h2>
             <p class="section-subtitle">Download a single .html file and open it in your browser anytime, even offline.</p>
-            <div class="versions">
+            <div class="versions versions--single">
                 <article class="version-card">
                     <p class="version-card__kind">Latest release</p>
                     <h3 class="version-card__name">Version <span class="release-version">1.2</span></h3>
@@ -107,15 +107,6 @@
                         <a class="btn btn--primary" id="dl-wasm" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_WASM.html">Download WASM</a>
                         <a class="btn btn--ghost" id="dl-js" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_JS.html">Download JS</a>
                     </div>
-                </article>
-                <article class="version-card version-card--beta">
-                    <p class="version-card__kind"><span class="badge">Beta</span></p>
-                    <h3 class="version-card__name">Version <span class="beta-version">1.3 Beta</span></h3>
-                    <div class="version-card__buttons">
-                        <a class="btn btn--primary" id="dl-beta-wasm" href="https://treasureclient.github.io/Treasure-Client-1.12-src/wasm.html" download="Treasure-Client_Beta_WASM.html">Download WASM</a>
-                        <a class="btn btn--ghost" id="dl-beta-js" href="https://treasureclient.github.io/Treasure-Client-1.12-src/js.html" download="Treasure-Client_Beta_JS.html">Download JS</a>
-                    </div>
-                    <p class="version-card__note">Updated whenever new changes are ready. May have bugs.</p>
                 </article>
             </div>
         </section>
@@ -200,9 +191,6 @@
                 if (!info || !info.version) return;
                 var v = /beta/i.test(info.version) ? info.version : info.version + ' Beta';
                 document.querySelectorAll('.beta-version').forEach(function (el) { el.textContent = v; });
-                var file = 'Treasure-Client_' + v.replace(/\s+/g, '_');
-                document.getElementById('dl-beta-wasm').setAttribute('download', file + '_WASM.html');
-                document.getElementById('dl-beta-js').setAttribute('download', file + '_JS.html');
             })
             .catch(function () {});
 
