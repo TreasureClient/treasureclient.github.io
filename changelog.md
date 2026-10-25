@@ -82,3 +82,5 @@ Fixed
 -netherite armor not showing when worn
 
 ------------------------------------------------------
+1.3
+Optimization update, not out yet
