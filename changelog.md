@@ -1,3 +1,10 @@
+1.0 Beta
+
+-first version of Treasure Client
+
+-JS version is very laggy, use WASM if you can
+
+------------------------------------------------------
 1.1
 
 Added Mods
@@ -82,6 +89,53 @@ Fixed
 -netherite armor not showing when worn
 
 ------------------------------------------------------
-1.3
+1.3 (Beta)
 
-Optimization update, not out yet
+Optimization update, still in beta
+
+Performance
+
+-Performance modpack switch in the mod menu (on by default)
+
+-Celeritas (Sodium-style) chunk renderer, Celeritas Extra and Leaf Culling
+
+-Entity Culling, Particle Culling, Entity Render Distance
+
+-ImmediatelyFast: cheaper name tags and sign text, HUD only redrawn when it changes
+
+-Lithium, FerriteCore, FoamFix-style memory savings, TexFix, CensoredASM, BetterFps, Krypton, C2ME, VanillaFix, Enhanced Block Entities, Particle Core, No Chat Lag, AI Improvements, Dynamic FPS, Memory Saver
+
+-smoother chunk loading
+
+-TNT and zombie optimizations
+
+-optional Dynamic Resolution (off by default)
+
+------
+
+New
+
+-Sodium-style Video Settings with every setting in one place
+
+-new Mods screen
+
+-Tier Tagger, Clear Water, Saturation display, Hit Color
+
+-1.7 Animations: sweep and sprint hits swing differently, items dip on cooldown
+
+-.lag and .perf chat commands to find lag
+
+--------
+Fixed
+
+-eating getting stuck (crumbs but no eating)
+
+-golden apple eating
+
+-bows and eating cancelling on modern servers
+
+-explosion knockback not always applying
+
+-screen randomly jumping when moving the mouse
+
+-totem animation in the wrong place

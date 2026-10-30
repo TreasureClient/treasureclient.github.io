@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://treasureclient.github.io/sitemap.xml
