@@ -57,15 +57,15 @@
     <div class="starfield" aria-hidden="true"></div>
 
     <header class="nav">
-        <a href="#top" class="nav__brand">
+        <a href="./" class="nav__brand">
             <img class="nav__brand-mark" src="images/logo.png" width="92" height="92" alt="">
             <span class="nav__brand-text">Treasure Client</span>
         </a>
         <nav class="nav__links" aria-label="Primary">
-            <a href="#features">Features</a>
-            <a href="#faq">FAQ</a>
-            <a href="#changelog">Changelog</a>
-            <a class="nav__cta" href="#play">Play</a>
+            <a href="features.html">Features</a>
+            <a href="faq.html">FAQ</a>
+            <a href="changelog.html">Changelog</a>
+            <a class="nav__cta" href="play.html">Play</a>
         </nav>
     </header>
 
@@ -84,13 +84,13 @@
 
                 <div class="get">
                     <div class="get__buttons">
-                        <a class="btn btn--primary btn--lg" href="#play">Play</a>
-                        <a class="btn btn--ghost btn--lg" href="#download">Download</a>
+                        <a class="btn btn--primary btn--lg" href="play.html">Play</a>
+                        <a class="btn btn--ghost btn--lg" href="play.html#download">Download</a>
                     </div>
                 </div>
 
                 <p class="get__note">
-                    <a href="#changelog">Changelog</a> ·
+                    <a href="changelog.html">Changelog</a> ·
                     <a href="https://github.com/TreasureClient/treasureclient.github.io/releases" target="_blank" rel="noopener">All releases</a> ·
                     <a href="https://github.com/TreasureClient/Treasure-Client-1.12-src" target="_blank" rel="noopener">Source code</a>
                 </p>
@@ -107,206 +107,42 @@
             </div>
         </section>
 
-        <section class="versions-section" id="play">
-            <h2 class="section-title">Play</h2>
-            <p class="section-subtitle">Play right in your browser. WASM is faster. Use JS if WASM doesn't load on your device.</p>
-            <div class="versions">
-                <article class="version-card">
-                    <p class="version-card__kind">Latest release</p>
-                    <h3 class="version-card__name">Version <span class="release-version">1.2</span></h3>
-                    <div class="version-card__buttons">
-                        <a class="btn btn--primary" href="versions/1.12WASM.html">Play WASM</a>
-                        <a class="btn btn--ghost" href="versions/1.12JS.html">Play JS</a>
-                    </div>
+        <section class="about" id="about">
+            <h2 class="section-title">About</h2>
+            <p class="about__lead">
+                Treasure Client started with one idea: a 1.12.2 Eaglercraft client that has everything
+                in one place. Your mods, HUD, themes and settings all live in one menu, and the game runs
+                well even on a school Chromebook.
+            </p>
+
+            <ul class="about__stats">
+                <li><strong>1.12.2</strong><span>Eaglercraft</span></li>
+                <li><strong>20+</strong><span>performance mods</span></li>
+                <li><strong>5</strong><span>themes</span></li>
+                <li><strong>Free</strong><span>and open source</span></li>
+            </ul>
+
+            <div class="about__grid">
+                <article class="about__item">
+                    <span class="about__icon" aria-hidden="true">&#9889;</span>
+                    <h3>Fast on weak devices</h3>
+                    <p>A built-in performance modpack with a Sodium-style chunk renderer, entity and particle culling, and smoother chunk loading. Good for low-end laptops.</p>
                 </article>
-                <article class="version-card version-card--beta">
-                    <p class="version-card__kind"><span class="badge">Beta</span></p>
-                    <h3 class="version-card__name">Version <span class="beta-version">1.3 Beta</span></h3>
-                    <div class="version-card__buttons">
-                        <a class="btn btn--primary" href="https://treasureclient.github.io/Treasure-Client-1.12-src/">Play WASM</a>
-                        <a class="btn btn--ghost" href="https://treasureclient.github.io/Treasure-Client-1.12-src/js.html">Play JS</a>
-                    </div>
-                    <p class="version-card__note">The newest version before its release. May have bugs.</p>
+                <article class="about__item">
+                    <span class="about__icon" aria-hidden="true">&#9876;</span>
+                    <h3>Made for PvP</h3>
+                    <p>1.7 animations, Toggle Sprint, a custom crosshair, hit color, and fast keep-alive replies so your ping stays low.</p>
+                </article>
+                <article class="about__item">
+                    <span class="about__icon" aria-hidden="true">&#127757;</span>
+                    <h3>Works on newer servers</h3>
+                    <p>Modern items and blocks like spears, maces and wind charges show up properly on newer servers that support them.</p>
                 </article>
             </div>
-        </section>
 
-        <section class="versions-section" id="download">
-            <h2 class="section-title">Download</h2>
-            <p class="section-subtitle">Download a single .html file and open it in your browser anytime, even offline.</p>
-            <div class="versions versions--single">
-                <article class="version-card">
-                    <p class="version-card__kind">Latest release</p>
-                    <h3 class="version-card__name">Version <span class="release-version">1.2</span></h3>
-                    <div class="version-card__buttons">
-                        <a class="btn btn--primary" id="dl-wasm" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_WASM.html">Download WASM</a>
-                        <a class="btn btn--ghost" id="dl-js" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_JS.html">Download JS</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="features" id="features">
-            <h2 class="section-title">Features</h2>
-
-            <div class="feature-grid">
-                <article class="feature-card">
-                    <h3>Mod Menu</h3>
-                    <p>Turn mods on and off and change their settings in game. Includes Zoom, Toggle Sprint, Toggle Sneak, No Hurt Cam, TNT Timer, Low Fire, Low Shield, Small Totem, Fullbright, Hitboxes, a custom crosshair and more.</p>
-                </article>
-                <article class="feature-card">
-                    <h3>HUD Editor</h3>
-                    <p>Drag the FPS counter, CPS counter, ping display and other HUD mods wherever you want them on screen.</p>
-                </article>
-                <article class="feature-card">
-                    <h3>Themes</h3>
-                    <p>Five themes: Treasure, Frost, Tropical, Terracotta and Forest. Each one changes the menus and the background.</p>
-                </article>
-                <article class="feature-card">
-                    <h3>Modern Items and Blocks</h3>
-                    <p>On newer servers, items like spears, maces and wind charges show up as the real thing instead of old stand-ins. Spears work, and modern blocks show up on servers that support them.</p>
-                </article>
-                <article class="feature-card">
-                    <h3>Updated Textures</h3>
-                    <p>Blocks, items and potions use their current textures and colors from the newest Minecraft.</p>
-                </article>
-                <article class="feature-card">
-                    <h3>No Install</h3>
-                    <p>Play right here in the browser, or download a single .html file and open it anytime, even offline.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="changelog" id="changelog">
-            <h2 class="section-title">Changelog</h2>
-            <div class="changelog__list">
-                <details class="change" open>
-                    <summary><span class="change__ver">1.3 <span class="badge">Beta</span></span><span class="change__name">Optimization update</span></summary>
-                    <div class="change__body">
-                        <p class="change__intro">Still in beta. Play it from the Beta card in the Play section.</p>
-                        <h4>Performance</h4>
-                        <ul>
-                            <li>New "Performance modpack" switch in the mod menu, on by default</li>
-                            <li>Celeritas (Sodium-style) chunk renderer, with Celeritas Extra and Leaf Culling</li>
-                            <li>Entity Culling, Particle Culling and Entity Render Distance</li>
-                            <li>ImmediatelyFast: cheaper name tags and sign text, and the HUD is only redrawn when it changes</li>
-                            <li>Lithium, FerriteCore, FoamFix-style memory savings, TexFix, CensoredASM, BetterFps, Krypton, C2ME, VanillaFix, Enhanced Block Entities, Particle Core, No Chat Lag, AI Improvements, Dynamic FPS and Memory Saver</li>
-                            <li>Smoother chunk loading: chunk building can't freeze a frame anymore</li>
-                            <li>TNT and zombie optimizations</li>
-                            <li>Optional Dynamic Resolution (off by default)</li>
-                        </ul>
-                        <h4>New</h4>
-                        <ul>
-                            <li>Sodium-style Video Settings with every setting in one place and a description for each</li>
-                            <li>New Mods screen</li>
-                            <li>Tier Tagger, Clear Water, Saturation display and Hit Color</li>
-                            <li>1.7 Animations: sweep and sprint hits swing differently, and items dip while on cooldown</li>
-                            <li><code>.lag</code> and <code>.perf</code> chat commands to find out what's causing lag</li>
-                        </ul>
-                        <h4>Fixed</h4>
-                        <ul>
-                            <li>Eating getting stuck (crumbs but no eating)</li>
-                            <li>Golden apple eating</li>
-                            <li>Bows and eating cancelling on modern servers</li>
-                            <li>Explosion knockback not always applying</li>
-                            <li>Screen randomly jumping when moving the mouse</li>
-                            <li>Totem animation showing in the wrong place</li>
-                        </ul>
-                    </div>
-                </details>
-                <details class="change">
-                    <summary><span class="change__ver">1.2</span><span class="change__name">Themes and modern items</span></summary>
-                    <div class="change__body">
-                        <h4>Added mods</h4>
-                        <ul>
-                            <li>Low Fire</li>
-                            <li>Low Shield</li>
-                            <li>Small Totem</li>
-                            <li>Password Hider</li>
-                            <li>ViaVersion</li>
-                        </ul>
-                        <h4>Mod menu redesign</h4>
-                        <ul>
-                            <li>New side tabs (Modules, HUD Editor, Themes)</li>
-                            <li>New Treasure Client logo</li>
-                            <li>Themes: Treasure, Frost, Tropical, Terracotta and Forest</li>
-                            <li>Theme backgrounds on the main menu and other menus</li>
-                        </ul>
-                        <h4>ViaVersion</h4>
-                        <ul>
-                            <li>Modern blocks and items show up on newer servers</li>
-                            <li>Modern items (wind charge, mace, spears, copper and more)</li>
-                            <li>Old block and item textures updated to the new ones</li>
-                            <li>New potion colors</li>
-                            <li>Spears work on newer servers (jab and charge)</li>
-                        </ul>
-                        <h4>Fixed</h4>
-                        <ul>
-                            <li>Mod menu scrolling with the mouse wheel</li>
-                            <li>Pink potion textures</li>
-                            <li>Mods turn on with one click now</li>
-                            <li>Netherite armor not showing when worn</li>
-                        </ul>
-                    </div>
-                </details>
-                <details class="change">
-                    <summary><span class="change__ver">1.1</span><span class="change__name">New mods and fixes</span></summary>
-                    <div class="change__body">
-                        <h4>Added mods</h4>
-                        <ul>
-                            <li>No Hurt Cam</li>
-                            <li>TNT Timer</li>
-                            <li>Smooth Zoom</li>
-                        </ul>
-                        <h4>Mod menu redesign</h4>
-                        <ul>
-                            <li>Settings boxes for each mod</li>
-                            <li>Reorganized tabs</li>
-                        </ul>
-                        <h4>Fixed</h4>
-                        <ul>
-                            <li>Mod menu search</li>
-                            <li>Toggle Sprint</li>
-                            <li>Toggle Sneak</li>
-                            <li>Mods no longer work while turned off</li>
-                        </ul>
-                    </div>
-                </details>
-                <details class="change">
-                    <summary><span class="change__ver">1.0 <span class="badge badge--dim">Beta</span></span><span class="change__name">First release</span></summary>
-                    <div class="change__body">
-                        <ul>
-                            <li>First version of Treasure Client</li>
-                            <li>The JS version is very laggy, so use WASM if you can</li>
-                        </ul>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <section class="faq" id="faq">
-            <h2 class="section-title">FAQ</h2>
-            <div class="faq__list">
-                <details class="faq__item">
-                    <summary>Should I use WASM or JS?</summary>
-                    <p>Use WASM. It runs a lot faster. The JS version is there for older browsers and devices where WASM doesn't load.</p>
-                </details>
-                <details class="faq__item">
-                    <summary>How do I play offline?</summary>
-                    <p>Download the WASM or JS file from the <a href="#download">Download</a> section and open it in your browser. You don't need an internet connection for singleplayer.</p>
-                </details>
-                <details class="faq__item">
-                    <summary>Which servers can I join?</summary>
-                    <p>Any Eaglercraft 1.12 server. Modern items, blocks and spears show up on newer servers that support them.</p>
-                </details>
-                <details class="faq__item">
-                    <summary>Is it free?</summary>
-                    <p>Yes. No account or payment needed.</p>
-                </details>
-                <details class="faq__item">
-                    <summary>Is the source code available?</summary>
-                    <p>Yes. The full source is on GitHub: <a href="https://github.com/TreasureClient/Treasure-Client-1.12-src" target="_blank" rel="noopener">Treasure-Client-1.12-src</a>. The <code>WASM</code> branch has the WASM version and the <code>JS</code> branch has the JS version.</p>
-                </details>
+            <div class="about__cta">
+                <a class="btn btn--primary" href="play.html">Play now</a>
+                <a class="btn btn--ghost" href="features.html">See all features</a>
             </div>
         </section>
     </main>
@@ -319,7 +155,7 @@
             <span>·</span>
             <a href="https://github.com/TreasureClient/treasureclient.github.io/releases" target="_blank" rel="noopener">Releases</a>
             <span>·</span>
-            <a href="#changelog">Changelog</a>
+            <a href="changelog.html">Changelog</a>
             <span>·</span>
             <a href="https://github.com/TreasureClient/Treasure-Client-1.12-src" target="_blank" rel="noopener">Source code</a>
             <span>·</span>
@@ -346,41 +182,6 @@
                 shot.style.setProperty('--ry', '0deg');
             });
         })();
-
-        // Show the beta's version number (the beta site writes it on every update).
-        fetch('https://treasureclient.github.io/Treasure-Client-1.12-src/version.json', { cache: 'no-store' })
-            .then(function (r) { return r.ok ? r.json() : null; })
-            .then(function (info) {
-                if (!info || !info.version) return;
-                var v = /beta/i.test(info.version) ? info.version : info.version + ' Beta';
-                document.querySelectorAll('.beta-version').forEach(function (el) { el.textContent = v; });
-            })
-            .catch(function () {});
-
-        // Point the download buttons at the files in the latest GitHub release.
-        // The links above are a fallback if GitHub can't be reached.
-        fetch('https://api.github.com/repos/TreasureClient/treasureclient.github.io/releases/latest')
-            .then(function (r) { return r.ok ? r.json() : null; })
-            .then(function (rel) {
-                if (!rel || !rel.assets) return;
-                rel.assets.forEach(function (a) {
-                    var mb = ' (' + Math.round(a.size / 1048576) + ' MB)';
-                    if (/wasm/i.test(a.name)) {
-                        var w = document.getElementById('dl-wasm');
-                        w.href = a.browser_download_url;
-                        w.textContent = 'Download WASM' + mb;
-                    } else if (/js\.html$/i.test(a.name)) {
-                        var j = document.getElementById('dl-js');
-                        j.href = a.browser_download_url;
-                        j.textContent = 'Download JS' + mb;
-                    }
-                });
-                if (rel.name) {
-                    var name = rel.name.replace(/^v(ersion)?\s*/i, '');
-                    document.querySelectorAll('.release-version').forEach(function (el) { el.textContent = name; });
-                }
-            })
-            .catch(function () {});
     </script>
 </body>
 </html>

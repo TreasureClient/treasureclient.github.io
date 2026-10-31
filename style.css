@@ -129,6 +129,11 @@ img { max-width: 100%; display: block; }
 
 .nav__links a { color: var(--text-dim); font-weight: 500; font-size: 0.95rem; }
 .nav__links a:hover { color: var(--gold-bright); }
+.nav__links a[aria-current="page"]:not(.nav__cta) { color: var(--gold-bright); }
+.nav__cta[aria-current="page"] { background: var(--gold); color: var(--bg) !important; }
+
+/* pages other than home: leave room under the nav */
+main.page { min-height: calc(100vh - 220px); padding-top: 1.5rem; }
 
 .nav__cta {
     padding: 0.5rem 1.1rem;
@@ -442,11 +447,10 @@ section[id] { scroll-margin-top: 70px; }
 }
 
 .shot__frame:hover {
-    transform: rotateX(var(--rx)) rotateY(var(--ry)) translateY(-8px) scale(1.02);
+    transform: rotateX(var(--rx)) rotateY(var(--ry)) translateY(-8px);
     border-color: var(--gold);
     box-shadow: 0 34px 80px rgba(0, 0, 0, 0.6), 0 0 60px var(--gold-glow);
 }
-.shot__frame:hover img { transform: scale(1.04); }
 .shot__frame:hover .shot__shine { opacity: 1; }
 
 @keyframes shot-in {
@@ -608,6 +612,75 @@ section[id] { scroll-margin-top: 70px; }
 }
 
 /* ---------------------------------------------------------
+   About (home page, under the hero)
+   --------------------------------------------------------- */
+.about { padding-top: clamp(1.5rem, 4vw, 3rem); }
+.about__lead {
+    max-width: 62ch;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+.about__stats {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-2);
+    overflow: hidden;
+}
+.about__stats li {
+    padding: 1.3rem 0.5rem;
+    text-align: center;
+    border-left: 1px solid var(--border);
+}
+.about__stats li:first-child { border-left: 0; }
+.about__stats strong {
+    display: block;
+    font-family: var(--font-pixel);
+    font-size: clamp(0.9rem, 2.4vw, 1.25rem);
+    color: var(--gold);
+    text-shadow: 0 0 14px var(--gold-glow);
+    margin-bottom: 0.55rem;
+}
+.about__stats span { color: var(--text-dim); font-size: 0.9rem; }
+.about__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+.about__item {
+    padding: 1.6rem 1.4rem 1.4rem;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--gold-deep);
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(245, 197, 66, 0.06), transparent 60%), var(--bg-2);
+    transition: transform .2s ease, border-color .2s ease;
+}
+.about__item:hover { transform: translateY(-4px); border-top-color: var(--gold); }
+.about__icon { display: block; font-size: 1.7rem; margin-bottom: 0.7rem; }
+.about__item h3 { margin: 0 0 0.5rem; color: var(--gold-bright); font-size: 1.05rem; }
+.about__item p { margin: 0; color: var(--text-dim); line-height: 1.6; font-size: 0.95rem; }
+.about__cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2.5rem;
+}
+@media (max-width: 800px) {
+    .about__grid { grid-template-columns: minmax(0, 1fr); }
+    .about__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .about__stats li:nth-child(3) { border-left: 0; }
+    .about__stats li:nth-child(n+3) { border-top: 1px solid var(--border); }
+}
+
+/* ---------------------------------------------------------
    Responsive tweaks
    --------------------------------------------------------- */
 @media (max-width: 900px) {
@@ -617,7 +690,10 @@ section[id] { scroll-margin-top: 70px; }
 }
 
 @media (max-width: 640px) {
-    .nav__links a:not(.nav__cta) { display: none; }
+    .nav { flex-wrap: wrap; row-gap: 0.6rem; }
+    .nav__links { gap: 0.9rem; flex-wrap: wrap; }
+    .nav__links a { font-size: 0.85rem; }
+    .nav__cta { padding: 0.35rem 0.8rem; }
     .nav__brand-text { font-size: 1rem; }
     .get__buttons .btn { flex: 1 1 100%; }
     .version-card__buttons .btn { flex: 1 1 100%; }
@@ -630,7 +706,6 @@ section[id] { scroll-margin-top: 70px; }
     .starfield, .hero__shot { animation: none; }
     .shot__frame, .shot__frame img { transition: none; }
     .shot__frame:hover { transform: none; }
-    .shot__frame:hover img { transform: none; }
     html { scroll-behavior: auto; }
     .btn, .feature-card { transition: none; }
 }

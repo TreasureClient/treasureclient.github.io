@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play and Download · Treasure Client</title>
+    <meta name="description" content="Play Treasure Client, a free Eaglercraft 1.12.2 client, right in your browser, or download it as a single .html file to play offline.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://treasureclient.github.io/play.html">
+
+    <meta property="og:site_name" content="Treasure Client">
+    <meta property="og:title" content="Play and Download · Treasure Client">
+    <meta property="og:description" content="Play Treasure Client, a free Eaglercraft 1.12.2 client, right in your browser, or download it as a single .html file to play offline.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://treasureclient.github.io/play.html">
+    <meta property="og:image" content="https://treasureclient.github.io/images/main-menu-1.3.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#140f08">
+
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Cinzel:wght@600;700&family=Cinzel+Decorative:wght@900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="starfield" aria-hidden="true"></div>
+
+    <header class="nav">
+        <a href="./" class="nav__brand">
+            <img class="nav__brand-mark" src="images/logo.png" width="92" height="92" alt="">
+            <span class="nav__brand-text">Treasure Client</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+            <a href="features.html">Features</a>
+            <a href="faq.html">FAQ</a>
+            <a href="changelog.html">Changelog</a>
+            <a class="nav__cta" href="play.html" aria-current="page">Play</a>
+        </nav>
+    </header>
+
+    <main id="top" class="page">
+        <section class="versions-section" id="play">
+            <h2 class="section-title">Play</h2>
+            <p class="section-subtitle">Play right in your browser. WASM is faster. Use JS if WASM doesn't load on your device.</p>
+            <div class="versions">
+                <article class="version-card">
+                    <p class="version-card__kind">Latest release</p>
+                    <h3 class="version-card__name">Version <span class="release-version">1.2</span></h3>
+                    <div class="version-card__buttons">
+                        <a class="btn btn--primary" href="versions/1.12WASM.html">Play WASM</a>
+                        <a class="btn btn--ghost" href="versions/1.12JS.html">Play JS</a>
+                    </div>
+                </article>
+                <article class="version-card version-card--beta">
+                    <p class="version-card__kind"><span class="badge">Beta</span></p>
+                    <h3 class="version-card__name">Version <span class="beta-version">1.3 Beta</span></h3>
+                    <div class="version-card__buttons">
+                        <a class="btn btn--primary" href="https://treasureclient.github.io/Treasure-Client-1.12-src/">Play WASM</a>
+                        <a class="btn btn--ghost" href="https://treasureclient.github.io/Treasure-Client-1.12-src/js.html">Play JS</a>
+                    </div>
+                    <p class="version-card__note">The newest version before its release. May have bugs.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="versions-section" id="download">
+            <h2 class="section-title">Download</h2>
+            <p class="section-subtitle">Download a single .html file and open it in your browser anytime, even offline.</p>
+            <div class="versions versions--single">
+                <article class="version-card">
+                    <p class="version-card__kind">Latest release</p>
+                    <h3 class="version-card__name">Version <span class="release-version">1.2</span></h3>
+                    <div class="version-card__buttons">
+                        <a class="btn btn--primary" id="dl-wasm" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_WASM.html">Download WASM</a>
+                        <a class="btn btn--ghost" id="dl-js" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_JS.html">Download JS</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__brand">Treasure Client</p>
+        <p class="footer__note">Not affiliated with Mojang or Microsoft.</p>
+        <p class="footer__links">
+            <a href="https://github.com/TreasureClient/treasureclient.github.io" target="_blank" rel="noopener">GitHub</a>
+            <span>·</span>
+            <a href="https://github.com/TreasureClient/treasureclient.github.io/releases" target="_blank" rel="noopener">Releases</a>
+            <span>·</span>
+            <a href="changelog.html">Changelog</a>
+            <span>·</span>
+            <a href="https://github.com/TreasureClient/Treasure-Client-1.12-src" target="_blank" rel="noopener">Source code</a>
+            <span>·</span>
+            <a href="#top">Back to top</a>
+        </p>
+    </footer>
+
+    <script>
+        // Show the beta's version number (the beta site writes it on every update).
+        fetch('https://treasureclient.github.io/Treasure-Client-1.12-src/version.json', { cache: 'no-store' })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (info) {
+                if (!info || !info.version) return;
+                var v = /beta/i.test(info.version) ? info.version : info.version + ' Beta';
+                document.querySelectorAll('.beta-version').forEach(function (el) { el.textContent = v; });
+            })
+            .catch(function () {});
+
+        // Point the download buttons at the files in the latest GitHub release.
+        // The links above are a fallback if GitHub can't be reached.
+        fetch('https://api.github.com/repos/TreasureClient/treasureclient.github.io/releases/latest')
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (rel) {
+                if (!rel || !rel.assets) return;
+                rel.assets.forEach(function (a) {
+                    var mb = ' (' + Math.round(a.size / 1048576) + ' MB)';
+                    if (/wasm/i.test(a.name)) {
+                        var w = document.getElementById('dl-wasm');
+                        if (!w) return;
+                        w.href = a.browser_download_url;
+                        w.textContent = 'Download WASM' + mb;
+                    } else if (/js\.html$/i.test(a.name)) {
+                        var j = document.getElementById('dl-js');
+                        j.href = a.browser_download_url;
+                        j.textContent = 'Download JS' + mb;
+                    }
+                });
+                if (rel.name) {
+                    var name = rel.name.replace(/^v(ersion)?\s*/i, '');
+                    document.querySelectorAll('.release-version').forEach(function (el) { el.textContent = name; });
+                }
+            })
+            .catch(function () {});
+    </script>
+</body>
+</html>

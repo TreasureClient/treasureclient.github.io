@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog · Treasure Client</title>
+    <meta name="description" content="Every Treasure Client update: new mods, performance improvements and fixes for each version.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://treasureclient.github.io/changelog.html">
+
+    <meta property="og:site_name" content="Treasure Client">
+    <meta property="og:title" content="Changelog · Treasure Client">
+    <meta property="og:description" content="Every Treasure Client update: new mods, performance improvements and fixes for each version.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://treasureclient.github.io/changelog.html">
+    <meta property="og:image" content="https://treasureclient.github.io/images/main-menu-1.3.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#140f08">
+
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Cinzel:wght@600;700&family=Cinzel+Decorative:wght@900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="starfield" aria-hidden="true"></div>
+
+    <header class="nav">
+        <a href="./" class="nav__brand">
+            <img class="nav__brand-mark" src="images/logo.png" width="92" height="92" alt="">
+            <span class="nav__brand-text">Treasure Client</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+            <a href="features.html">Features</a>
+            <a href="faq.html">FAQ</a>
+            <a href="changelog.html" aria-current="page">Changelog</a>
+            <a class="nav__cta" href="play.html">Play</a>
+        </nav>
+    </header>
+
+    <main id="top" class="page">
+        <section class="changelog" id="changelog">
+            <h2 class="section-title">Changelog</h2>
+            <div class="changelog__list">
+                <details class="change" open>
+                    <summary><span class="change__ver">1.3 <span class="badge">Beta</span></span><span class="change__name">Optimization update</span></summary>
+                    <div class="change__body">
+                        <p class="change__intro">Still in beta. Play it from the Beta card on the <a href="play.html">Play</a> page.</p>
+                        <h4>Performance</h4>
+                        <ul>
+                            <li>New "Performance modpack" switch in the mod menu, on by default</li>
+                            <li>Celeritas (Sodium-style) chunk renderer, with Celeritas Extra and Leaf Culling</li>
+                            <li>Entity Culling, Particle Culling and Entity Render Distance</li>
+                            <li>ImmediatelyFast: cheaper name tags and sign text, and the HUD is only redrawn when it changes</li>
+                            <li>Lithium, FerriteCore, FoamFix-style memory savings, TexFix, CensoredASM, BetterFps, Krypton, C2ME, VanillaFix, Enhanced Block Entities, Particle Core, No Chat Lag, AI Improvements, Dynamic FPS and Memory Saver</li>
+                            <li>Smoother chunk loading: chunk building can't freeze a frame anymore</li>
+                            <li>TNT and zombie optimizations</li>
+                            <li>Optional Dynamic Resolution (off by default)</li>
+                        </ul>
+                        <h4>New</h4>
+                        <ul>
+                            <li>Sodium-style Video Settings with every setting in one place and a description for each</li>
+                            <li>New Mods screen</li>
+                            <li>Tier Tagger, Clear Water, Saturation display and Hit Color</li>
+                            <li>1.7 Animations: sweep and sprint hits swing differently, and items dip while on cooldown</li>
+                            <li><code>.lag</code> and <code>.perf</code> chat commands to find out what's causing lag</li>
+                        </ul>
+                        <h4>Fixed</h4>
+                        <ul>
+                            <li>Eating getting stuck (crumbs but no eating)</li>
+                            <li>Golden apple eating</li>
+                            <li>Bows and eating cancelling on modern servers</li>
+                            <li>Explosion knockback not always applying</li>
+                            <li>Screen randomly jumping when moving the mouse</li>
+                            <li>Totem animation showing in the wrong place</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="change">
+                    <summary><span class="change__ver">1.2</span><span class="change__name">Themes and modern items</span></summary>
+                    <div class="change__body">
+                        <h4>Added mods</h4>
+                        <ul>
+                            <li>Low Fire</li>
+                            <li>Low Shield</li>
+                            <li>Small Totem</li>
+                            <li>Password Hider</li>
+                            <li>ViaVersion</li>
+                        </ul>
+                        <h4>Mod menu redesign</h4>
+                        <ul>
+                            <li>New side tabs (Modules, HUD Editor, Themes)</li>
+                            <li>New Treasure Client logo</li>
+                            <li>Themes: Treasure, Frost, Tropical, Terracotta and Forest</li>
+                            <li>Theme backgrounds on the main menu and other menus</li>
+                        </ul>
+                        <h4>ViaVersion</h4>
+                        <ul>
+                            <li>Modern blocks and items show up on newer servers</li>
+                            <li>Modern items (wind charge, mace, spears, copper and more)</li>
+                            <li>Old block and item textures updated to the new ones</li>
+                            <li>New potion colors</li>
+                            <li>Spears work on newer servers (jab and charge)</li>
+                        </ul>
+                        <h4>Fixed</h4>
+                        <ul>
+                            <li>Mod menu scrolling with the mouse wheel</li>
+                            <li>Pink potion textures</li>
+                            <li>Mods turn on with one click now</li>
+                            <li>Netherite armor not showing when worn</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="change">
+                    <summary><span class="change__ver">1.1</span><span class="change__name">New mods and fixes</span></summary>
+                    <div class="change__body">
+                        <h4>Added mods</h4>
+                        <ul>
+                            <li>No Hurt Cam</li>
+                            <li>TNT Timer</li>
+                            <li>Smooth Zoom</li>
+                        </ul>
+                        <h4>Mod menu redesign</h4>
+                        <ul>
+                            <li>Settings boxes for each mod</li>
+                            <li>Reorganized tabs</li>
+                        </ul>
+                        <h4>Fixed</h4>
+                        <ul>
+                            <li>Mod menu search</li>
+                            <li>Toggle Sprint</li>
+                            <li>Toggle Sneak</li>
+                            <li>Mods no longer work while turned off</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="change">
+                    <summary><span class="change__ver">1.0 <span class="badge badge--dim">Beta</span></span><span class="change__name">First release</span></summary>
+                    <div class="change__body">
+                        <ul>
+                            <li>First version of Treasure Client</li>
+                            <li>The JS version is very laggy, so use WASM if you can</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__brand">Treasure Client</p>
+        <p class="footer__note">Not affiliated with Mojang or Microsoft.</p>
+        <p class="footer__links">
+            <a href="https://github.com/TreasureClient/treasureclient.github.io" target="_blank" rel="noopener">GitHub</a>
+            <span>·</span>
+            <a href="https://github.com/TreasureClient/treasureclient.github.io/releases" target="_blank" rel="noopener">Releases</a>
+            <span>·</span>
+            <a href="changelog.html">Changelog</a>
+            <span>·</span>
+            <a href="https://github.com/TreasureClient/Treasure-Client-1.12-src" target="_blank" rel="noopener">Source code</a>
+            <span>·</span>
+            <a href="#top">Back to top</a>
+        </p>
+    </footer>
+
+</body>
+</html>
