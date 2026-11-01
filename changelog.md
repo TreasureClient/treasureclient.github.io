@@ -105,7 +105,15 @@ Performance
 
 -Lithium, FerriteCore, FoamFix-style memory savings, TexFix, CensoredASM, BetterFps, Krypton, C2ME, VanillaFix, Enhanced Block Entities, Particle Core, No Chat Lag, AI Improvements, Dynamic FPS, Memory Saver
 
--smoother chunk loading
+-smoother chunk loading: a heavy chunk is built over a few frames instead of freezing one
+
+-sounds and music load in the background instead of freezing the game, muted sounds aren't loaded
+
+-Fast Ping: ping checks answered the moment they arrive
+
+-FPS Reducer: lower frame rate after a while with no input
+
+-server packets spread over a few frames so joining doesn't freeze
 
 -TNT and zombie optimizations
 
@@ -114,6 +122,20 @@ Performance
 ------
 
 New
+
+-mod menu redesign: module tiles with icons, click a tile to turn it on
+
+-Right Shift screen: freeze the game, drag your HUD, open the mods
+
+-Treasure Animations: swing styles (Treasure, Slash, Spin, Smooth), swing speed, hit punch, draw twirl, sway
+
+-Treasure particles: gold, rainbow, frost or ember totem pops and hit sparkles
+
+-Elytra Fix: elytra opens the moment you press jump
+
+-offhand swap: hover an item in your inventory and press F
+
+-menu and zoom keys moved to Options, Controls, Treasure Client
 
 -Sodium-style Video Settings with every setting in one place
 
@@ -124,6 +146,8 @@ New
 -1.7 Animations: sweep and sprint hits swing differently, items dip on cooldown
 
 -.lag and .perf chat commands to find lag
+
+-kick log (.kicklog) shows the last packets sent before a kick
 
 --------
 Fixed
@@ -139,3 +163,7 @@ Fixed
 -screen randomly jumping when moving the mouse
 
 -totem animation in the wrong place
+
+-sprint hits looking like sweep hits in 1.7 Animations
+
+-mod menu settings boxes squashed together

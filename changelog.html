@@ -59,17 +59,29 @@
                             <li>Entity Culling, Particle Culling and Entity Render Distance</li>
                             <li>ImmediatelyFast: cheaper name tags and sign text, and the HUD is only redrawn when it changes</li>
                             <li>Lithium, FerriteCore, FoamFix-style memory savings, TexFix, CensoredASM, BetterFps, Krypton, C2ME, VanillaFix, Enhanced Block Entities, Particle Core, No Chat Lag, AI Improvements, Dynamic FPS and Memory Saver</li>
-                            <li>Smoother chunk loading: chunk building can't freeze a frame anymore</li>
+                            <li>Smoother chunk loading: a heavy chunk is built over a few frames instead of freezing one, and lobbies still load fast</li>
+                            <li>Sounds and music load in the background instead of freezing the game, and muted sounds aren't loaded at all</li>
+                            <li>Fast Ping: the server's ping checks are answered the moment they arrive, so your ping stays low</li>
+                            <li>FPS Reducer: lowers the frame rate after a while with no input, so your computer stays cool</li>
+                            <li>Server packets are spread over a few frames, so joining a world or a match doesn't freeze the game</li>
                             <li>TNT and zombie optimizations</li>
                             <li>Optional Dynamic Resolution (off by default)</li>
                         </ul>
                         <h4>New</h4>
                         <ul>
-                            <li>Sodium-style Video Settings with every setting in one place and a description for each</li>
+                            <li>Mod menu redesign: every module is a tile with its own icon, and you click a tile to turn it on</li>
+                            <li>Right Shift screen: press Right Shift in a world to freeze the game, drag your HUD around, or open the mods</li>
+                            <li>Treasure Animations: our own swing styles (Treasure, Slash, Spin, Smooth), swing speed, hit punch, draw twirl and sway</li>
+                            <li>Treasure particles: gold, rainbow, frost or ember colors for totem pops, plus sparkles where your hits land</li>
+                            <li>Elytra Fix: your elytra opens the moment you press jump in the air</li>
+                            <li>Offhand swap: hover an item in your inventory and press F to put it in your offhand</li>
+                            <li>The menu and zoom keys are now in Options, Controls, Treasure Client</li>
+                            <li>Sodium-style Video Settings with every setting in one place, a description for each, and settings for every performance mod</li>
                             <li>New Mods screen</li>
                             <li>Tier Tagger, Clear Water, Saturation display and Hit Color</li>
                             <li>1.7 Animations: sweep and sprint hits swing differently, and items dip while on cooldown</li>
                             <li><code>.lag</code> and <code>.perf</code> chat commands to find out what's causing lag</li>
+                            <li>Kick log: if a server kicks you, the last packets your game sent show up so the cause can be found (<code>.kicklog</code>)</li>
                         </ul>
                         <h4>Fixed</h4>
                         <ul>
@@ -79,6 +91,8 @@
                             <li>Explosion knockback not always applying</li>
                             <li>Screen randomly jumping when moving the mouse</li>
                             <li>Totem animation showing in the wrong place</li>
+                            <li>Sprint hits looking like sweep hits in 1.7 Animations</li>
+                            <li>Settings boxes in the mod menu being squashed together</li>
                         </ul>
                     </div>
                 </details>
