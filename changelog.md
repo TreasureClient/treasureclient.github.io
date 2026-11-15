@@ -188,3 +188,4 @@ New
 -the game starts right away: no countdown and no "press any key" (sound turns on at your first click or key press)
 
 -Auto Login mod: remembers the password you type in /login or /register and logs you in next time (per server, off by default)
+-Profiles: click your face in the top right of the title screen to manage alts. Each profile has its own name, skin, cape and mod settings, and everything saves
