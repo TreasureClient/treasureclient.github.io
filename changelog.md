@@ -173,3 +173,14 @@ Fixed
 -sprint hits looking like sweep hits in 1.7 Animations
 
 -mod menu settings boxes squashed together
+
+------------------------------------------------------
+1.4 Beta
+
+In progress (play it from the Beta card)
+
+New
+
+-new loading screen: a treasure chest that opens when the game is ready, with a real progress bar and tips
+
+-the game starts right away (no more 5 second countdown)
