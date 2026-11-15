@@ -184,3 +184,7 @@ New
 -new loading screen: the Treasure Client logo with a real progress bar and tips, and a burst of coins when the game is ready
 
 -the game starts right away (no more 5 second countdown)
+
+Fixed
+
+-lag that slowly built up in Duels and other minigames: block entities from reloaded maps were never removed and kept running
