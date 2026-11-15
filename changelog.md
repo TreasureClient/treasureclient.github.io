@@ -181,6 +181,6 @@ In progress (play it from the Beta card)
 
 New
 
--new loading screen: a treasure chest that opens when the game is ready, with a real progress bar and tips
+-new loading screen: the Treasure Client logo with a real progress bar and tips, and a burst of coins when the game is ready
 
 -the game starts right away (no more 5 second countdown)
