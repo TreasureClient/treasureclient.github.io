@@ -48,16 +48,16 @@
         <section class="versions-section" id="play">
             <h2 class="section-title">Play</h2>
             <p class="section-subtitle">Play right in your browser. WASM is faster. Use JS if WASM doesn't load on your device.</p>
-            <div class="versions">
+            <div class="versions versions--single" id="play-cards">
                 <article class="version-card">
                     <p class="version-card__kind">Latest release</p>
-                    <h3 class="version-card__name">Version <span class="release-version">1.2</span></h3>
+                    <h3 class="version-card__name">Version <span class="release-version">1.3</span></h3>
                     <div class="version-card__buttons">
                         <a class="btn btn--primary" href="versions/1.12WASM.html">Play WASM</a>
                         <a class="btn btn--ghost" href="versions/1.12JS.html">Play JS</a>
                     </div>
                 </article>
-                <article class="version-card version-card--beta">
+                <article class="version-card version-card--beta" id="beta-card" hidden>
                     <p class="version-card__kind"><span class="badge">Beta</span></p>
                     <h3 class="version-card__name">Version <span class="beta-version">1.3 Beta</span></h3>
                     <div class="version-card__buttons">
@@ -75,10 +75,10 @@
             <div class="versions versions--single">
                 <article class="version-card">
                     <p class="version-card__kind">Latest release</p>
-                    <h3 class="version-card__name">Version <span class="release-version">1.2</span></h3>
+                    <h3 class="version-card__name">Version <span class="release-version">1.3</span></h3>
                     <div class="version-card__buttons">
-                        <a class="btn btn--primary" id="dl-wasm" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_WASM.html">Download WASM</a>
-                        <a class="btn btn--ghost" id="dl-js" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.2/Treasure-Client_1.2_JS.html">Download JS</a>
+                        <a class="btn btn--primary" id="dl-wasm" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.3/Treasure-Client_1.3_WASM.html">Download WASM</a>
+                        <a class="btn btn--ghost" id="dl-js" href="https://github.com/TreasureClient/treasureclient.github.io/releases/download/V1.3/Treasure-Client_1.3_JS.html">Download JS</a>
                     </div>
                 </article>
             </div>
@@ -103,13 +103,19 @@
     </footer>
 
     <script>
+        var RELEASE = '1.3'; // the current release; change on every release
         // Show the beta's version number (the beta site writes it on every update).
         fetch('https://treasureclient.github.io/Treasure-Client-1.12-src/version.json', { cache: 'no-store' })
             .then(function (r) { return r.ok ? r.json() : null; })
             .then(function (info) {
                 if (!info || !info.version) return;
+                // Only show the Beta card when the beta is newer than the release (not right after a release)
+                var base = String(info.version).replace(/\s*beta\s*/i, '').trim();
+                if (base === RELEASE) return;
                 var v = /beta/i.test(info.version) ? info.version : info.version + ' Beta';
                 document.querySelectorAll('.beta-version').forEach(function (el) { el.textContent = v; });
+                document.getElementById('beta-card').hidden = false;
+                document.getElementById('play-cards').classList.remove('versions--single');
             })
             .catch(function () {});
 

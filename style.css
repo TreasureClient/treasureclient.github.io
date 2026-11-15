@@ -709,3 +709,4 @@ section[id] { scroll-margin-top: 70px; }
     html { scroll-behavior: auto; }
     .btn, .feature-card { transition: none; }
 }
+[hidden] { display: none !important; }

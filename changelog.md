@@ -89,9 +89,9 @@ Fixed
 -netherite armor not showing when worn
 
 ------------------------------------------------------
-1.3 (Beta)
+1.3
 
-Optimization update, still in beta
+Optimization update
 
 Performance
 
@@ -116,6 +116,12 @@ Performance
 -server packets spread over a few frames so joining doesn't freeze
 
 -TNT and zombie optimizations
+
+-runs better on hot or slow computers: scoreboard and HUD only redrawn when they change, even with a menu open
+
+-block-breaking cracks, shields and banners loaded before you join, so the first use doesn't freeze
+
+-moving the mouse costs less while aiming, so FPS drops less when you look around
 
 -optional Dynamic Resolution (off by default)
 
