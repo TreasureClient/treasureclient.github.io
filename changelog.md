@@ -175,3 +175,16 @@ Fixed
 -mod menu settings boxes squashed together
 
 -lag that slowly built up in Duels and other minigames (block entities from reloaded maps were never removed and kept running)
+
+------------------------------------------------------
+1.4 Beta
+
+In progress (play it from the Beta card)
+
+New
+
+-new loading screen: the Treasure Client logo with a real progress bar and tips, and a burst of coins when the game is ready
+
+-the game starts right away: no countdown and no "press any key" (sound turns on at your first click or key press)
+
+-Auto Login mod: remembers the password you type in /login or /register and logs you in next time (per server, off by default)
