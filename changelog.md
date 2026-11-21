@@ -177,15 +177,44 @@ Fixed
 -lag that slowly built up in Duels and other minigames (block entities from reloaded maps were never removed and kept running)
 
 ------------------------------------------------------
-1.4 Beta
+1.4
 
-In progress (play it from the Beta card)
+Polish update
 
 New
 
--new loading screen: the Treasure Client logo with a real progress bar and tips, and a burst of coins when the game is ready
+-New loading screen: the Treasure Client logo with a real progress bar and tips, and a burst of coins when the game is ready
 
--the game starts right away: no countdown and no "press any key" (sound turns on at your first click or key press)
+-The game starts right away: no countdown and no "press any key" (sound turns on at your first click or key press)
+
+-Profiles: click your face in the top right of the title screen to manage alts. Each profile has its own name, skin, cape and mod settings, and everything saves
 
 -Auto Login mod: remembers the password you type in /login or /register and logs you in next time (per server, off by default)
--Profiles: click your face in the top right of the title screen to manage alts. Each profile has its own name, skin, cape and mod settings, and everything saves
+
+-Java servers: join Java Edition servers by typing java:// before the address. Each Java server remembers its own name, and if a server wants a Microsoft account you can pick another name or sign in instead of just being kicked
+
+-If a Java server kicks you for using a VPN, the screen explains why (the server sees the relay, not you) and opens the Java Servers settings so you can change the relay
+
+-Reach Display: how far away your last hit landed, counting only hits the server really counted. Show it in a box or as a small white number above your crosshair
+
+-Combo Counter: your hits in a row (resets when you get hit or after 3 seconds)
+
+-Item Counter: arrows, ender pearls, golden apples, totems, splash potions and, if you want, blocks
+
+-Scoreboard settings: hide the red numbers, resize it from 50% to 150%, and pick a normal, lighter or no background
+
+-Block Outline: 10 colours, thickness, opacity and an optional see-through fill
+
+--------
+Performance
+
+-Less background work every frame (about 6% of the game's CPU time): the overlay, the screen refresh timer and the page-size check do much less
+
+--------
+Fixed
+
+-Crafting with modern wood (cherry, mangrove, bamboo, crimson, warped and more) on servers
+
+-Less view jumping right after you click back into the game or close a menu
+
+-Right Shift only opens the mod menu while you play, so it types capital letters in chat again

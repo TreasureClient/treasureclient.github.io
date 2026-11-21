@@ -49,14 +49,31 @@
             <h2 class="section-title">Changelog</h2>
             <div class="changelog__list">
                 <details class="change" open>
-                    <summary><span class="change__ver">1.4 <span class="badge badge--dim">Beta</span></span><span class="change__name">In progress</span></summary>
+                    <summary><span class="change__ver">1.4</span><span class="change__name">Polish update</span></summary>
                     <div class="change__body">
                         <h4>New</h4>
                         <ul>
                             <li>New loading screen: the Treasure Client logo with a real progress bar and tips, and a burst of coins when the game is ready</li>
                             <li>The game starts right away: no countdown and no "press any key" (sound turns on at your first click or key press)</li>
-                            <li>Auto Login mod: remembers the password you type in /login or /register and logs you in next time (per server, off by default)</li>
                             <li>Profiles: click your face in the top right of the title screen to manage alts. Each profile has its own name, skin, cape and mod settings, and everything saves</li>
+                            <li>Auto Login mod: remembers the password you type in <code>/login</code> or <code>/register</code> and logs you in next time (per server, off by default)</li>
+                            <li>Java servers: join Java Edition servers by typing <code>java://</code> before the address. Each Java server remembers its own name, and if a server wants a Microsoft account you can pick another name or sign in instead of just being kicked</li>
+                            <li>If a Java server kicks you for using a VPN, the screen explains why (the server sees the relay, not you) and opens the Java Servers settings so you can change the relay</li>
+                            <li>Reach Display: how far away your last hit landed, counting only hits the server really counted. Show it in a box or as a small white number above your crosshair</li>
+                            <li>Combo Counter: your hits in a row (resets when you get hit or after 3 seconds)</li>
+                            <li>Item Counter: arrows, ender pearls, golden apples, totems, splash potions and, if you want, blocks</li>
+                            <li>Scoreboard settings: hide the red numbers, resize it from 50% to 150%, and pick a normal, lighter or no background</li>
+                            <li>Block Outline: 10 colours, thickness, opacity and an optional see-through fill</li>
+                        </ul>
+                        <h4>Performance</h4>
+                        <ul>
+                            <li>Less background work every frame (about 6% of the game's CPU time): the overlay, the screen refresh timer and the page-size check do much less</li>
+                        </ul>
+                        <h4>Fixed</h4>
+                        <ul>
+                            <li>Crafting with modern wood (cherry, mangrove, bamboo, crimson, warped and more) on servers</li>
+                            <li>Less view jumping right after you click back into the game or close a menu</li>
+                            <li>Right Shift only opens the mod menu while you play, so it types capital letters in chat again</li>
                         </ul>
                     </div>
                 </details>
