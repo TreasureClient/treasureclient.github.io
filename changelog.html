@@ -49,31 +49,56 @@
             <h2 class="section-title">Changelog</h2>
             <div class="changelog__list">
                 <details class="change" open>
-                    <summary><span class="change__ver">1.4</span><span class="change__name">Polish update</span></summary>
+                    <summary><span class="change__ver">1.5 <span class="badge badge--dim">Beta</span></span><span class="change__name">UI and cosmetics</span></summary>
                     <div class="change__body">
-                        <h4>New</h4>
+                        <h4>New look</h4>
                         <ul>
-                            <li>New loading screen: the Treasure Client logo with a real progress bar and tips, and a burst of coins when the game is ready</li>
-                            <li>The game starts right away: no countdown and no "press any key" (sound turns on at your first click or key press)</li>
-                            <li>Profiles: click your face in the top right of the title screen to manage alts. Each profile has its own name, skin, cape and mod settings, and everything saves</li>
-                            <li>Auto Login mod: remembers the password you type in <code>/login</code> or <code>/register</code> and logs you in next time (per server, off by default)</li>
-                            <li>Java servers: join Java Edition servers by typing <code>java://</code> before the address. Each Java server remembers its own name, and if a server wants a Microsoft account you can pick another name or sign in instead of just being kicked</li>
-                            <li>If a Java server kicks you for using a VPN, the screen explains why (the server sees the relay, not you) and opens the Java Servers settings so you can change the relay</li>
-                            <li>Reach Display: how far away your last hit landed, counting only hits the server really counted. Show it in a box or as a small white number above your crosshair</li>
-                            <li>Combo Counter: your hits in a row (resets when you get hit or after 3 seconds)</li>
-                            <li>Item Counter: arrows, ender pearls, golden apples, totems, splash potions and, if you want, blocks</li>
-                            <li>Scoreboard settings: hide the red numbers, resize it from 50% to 150%, and pick a normal, lighter or no background</li>
-                            <li>Block Outline: 10 colours, thickness, opacity and an optional see-through fill</li>
+                            <li>New main menu</li>
+                            <li>New Mod Menu</li>
+                            <li>New HUD look in your theme's colour</li>
+                            <li>Sakura and Dark themes</li>
+                            <li>Pick any background for each theme</li>
                         </ul>
-                        <h4>Performance</h4>
+                        <h4>Cosmetics</h4>
                         <ul>
-                            <li>Less background work every frame (about 6% of the game's CPU time): the overlay, the screen refresh timer and the page-size check do much less</li>
+                            <li>Animated capes, auras, hats and boots</li>
+                            <li>The Maker: design your own</li>
+                            <li>Other Treasure Client players see your cosmetics</li>
+                        </ul>
+                        <h4>Added mods</h4>
+                        <ul>
+                            <li>Bobby</li>
                         </ul>
                         <h4>Fixed</h4>
                         <ul>
-                            <li>Crafting with modern wood (cherry, mangrove, bamboo, crimson, warped and more) on servers</li>
-                            <li>Less view jumping right after you click back into the game or close a menu</li>
-                            <li>Right Shift only opens the mod menu while you play, so it types capital letters in chat again</li>
+                            <li>Menus switching back to the old look</li>
+                            <li>Right Shift opens the new Mod Menu</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="change">
+                    <summary><span class="change__ver">1.4</span><span class="change__name">Polish update</span></summary>
+                    <div class="change__body">
+                        <h4>Added mods</h4>
+                        <ul>
+                            <li>Reach Display</li>
+                            <li>Combo Counter</li>
+                            <li>Item Counter</li>
+                            <li>Block Outline</li>
+                            <li>Scoreboard settings</li>
+                            <li>Auto Login</li>
+                        </ul>
+                        <h4>New</h4>
+                        <ul>
+                            <li>New loading screen</li>
+                            <li>Profiles (switch between alts)</li>
+                            <li>Join Java Edition servers with <code>java://</code></li>
+                        </ul>
+                        <h4>Fixed</h4>
+                        <ul>
+                            <li>Crafting with modern wood on servers</li>
+                            <li>View jumping after closing a menu</li>
+                            <li>Right Shift typing capital letters in chat</li>
                         </ul>
                     </div>
                 </details>
@@ -82,49 +107,40 @@
                     <div class="change__body">
                         <h4>Performance</h4>
                         <ul>
-                            <li>New "Performance modpack" switch in the mod menu, on by default</li>
-                            <li>Celeritas (Sodium-style) chunk renderer, with Celeritas Extra and Leaf Culling</li>
-                            <li>Entity Culling, Particle Culling and Entity Render Distance</li>
-                            <li>ImmediatelyFast: cheaper name tags and sign text, and the HUD is only redrawn when it changes</li>
-                            <li>Lithium, FerriteCore, FoamFix-style memory savings, TexFix, CensoredASM, BetterFps, Krypton, C2ME, VanillaFix, Enhanced Block Entities, Particle Core, No Chat Lag, AI Improvements, Dynamic FPS and Memory Saver</li>
-                            <li>Smoother chunk loading: a heavy chunk is built over a few frames instead of freezing one, and lobbies still load fast</li>
-                            <li>Sounds and music load in the background instead of freezing the game, and muted sounds aren't loaded at all</li>
-                            <li>Fast Ping: the server's ping checks are answered the moment they arrive, so your ping stays low</li>
-                            <li>FPS Reducer: lowers the frame rate after a while with no input, so your computer stays cool</li>
-                            <li>Server packets are spread over a few frames, so joining a world or a match doesn't freeze the game</li>
-                            <li>TNT and zombie optimizations</li>
-                            <li>Runs better on hot or slow computers: the scoreboard and HUD are only redrawn when they change, even with a menu open</li>
-                            <li>Block-breaking cracks, shields and banners are loaded before you join, so using them the first time doesn't freeze the game</li>
-                            <li>Moving the mouse costs less while you aim, so your FPS drops less when you look around</li>
-                            <li>Optional Dynamic Resolution (off by default)</li>
+                            <li>Performance modpack (on by default)</li>
+                            <li>Celeritas (Sodium-style) chunk renderer</li>
+                            <li>Entity Culling, Particle Culling, ImmediatelyFast, Lithium, FerriteCore and more</li>
+                            <li>Smoother chunk loading</li>
+                            <li>Sounds and music load in the background</li>
+                            <li>Less freezing when joining a server</li>
                         </ul>
-                        <h4>New</h4>
+                        <h4>Added mods</h4>
                         <ul>
-                            <li>Mod menu redesign: every module is a tile with its own icon, and you click a tile to turn it on</li>
-                            <li>Right Shift screen: press Right Shift in a world to freeze the game, drag your HUD around, or open the mods</li>
-                            <li>Treasure Animations: our own swing styles (Treasure, Slash, Spin, Smooth), swing speed, hit punch, draw twirl and sway</li>
-                            <li>Treasure particles: gold, rainbow, frost or ember colors for totem pops, plus sparkles where your hits land</li>
-                            <li>Elytra Fix: your elytra opens the moment you press jump in the air</li>
-                            <li>Offhand swap: hover an item in your inventory and press F to put it in your offhand</li>
-                            <li>The menu and zoom keys are now in Options, Controls, Treasure Client</li>
-                            <li>Sodium-style Video Settings with every setting in one place, a description for each, and settings for every performance mod</li>
+                            <li>Treasure Animations</li>
+                            <li>Treasure Particles</li>
+                            <li>1.7 Animations</li>
+                            <li>Elytra Fix</li>
+                            <li>Tier Tagger</li>
+                            <li>Clear Water</li>
+                            <li>Saturation Display</li>
+                            <li>Hit Color</li>
+                            <li>Offhand Swap (press F in your inventory)</li>
+                        </ul>
+                        <h4>Mod menu redesign</h4>
+                        <ul>
+                            <li>Mod tiles with icons</li>
+                            <li>Right Shift screen to move your HUD</li>
+                            <li>Sodium-style Video Settings</li>
                             <li>New Mods screen</li>
-                            <li>Tier Tagger, Clear Water, Saturation display and Hit Color</li>
-                            <li>1.7 Animations: sweep and sprint hits swing differently, and items dip while on cooldown</li>
-                            <li><code>.lag</code> and <code>.perf</code> chat commands to find out what's causing lag</li>
-                            <li>Kick log: if a server kicks you, the last packets your game sent show up so the cause can be found (<code>.kicklog</code>)</li>
                         </ul>
                         <h4>Fixed</h4>
                         <ul>
-                            <li>Eating getting stuck (crumbs but no eating)</li>
-                            <li>Golden apple eating</li>
-                            <li>Bows and eating cancelling on modern servers</li>
-                            <li>Explosion knockback not always applying</li>
-                            <li>Screen randomly jumping when moving the mouse</li>
-                            <li>Totem animation showing in the wrong place</li>
-                            <li>Sprint hits looking like sweep hits in 1.7 Animations</li>
-                            <li>Settings boxes in the mod menu being squashed together</li>
-                            <li>Lag that slowly built up in Duels and other minigames (block entities from reloaded maps were never removed and kept running)</li>
+                            <li>Eating getting stuck</li>
+                            <li>Bows and eating on modern servers</li>
+                            <li>Explosion knockback</li>
+                            <li>Screen jumping when moving the mouse</li>
+                            <li>Totem animation in the wrong place</li>
+                            <li>Lag building up in Duels and other minigames</li>
                         </ul>
                     </div>
                 </details>

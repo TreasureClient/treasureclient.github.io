@@ -95,126 +95,141 @@ Optimization update
 
 Performance
 
--Performance modpack switch in the mod menu (on by default)
+-Performance modpack (on by default)
 
--Celeritas (Sodium-style) chunk renderer, Celeritas Extra and Leaf Culling
+-Celeritas (Sodium-style) chunk renderer
 
--Entity Culling, Particle Culling, Entity Render Distance
+-Entity Culling, Particle Culling, ImmediatelyFast, Lithium, FerriteCore and more
 
--ImmediatelyFast: cheaper name tags and sign text, HUD only redrawn when it changes
+-smoother chunk loading
 
--Lithium, FerriteCore, FoamFix-style memory savings, TexFix, CensoredASM, BetterFps, Krypton, C2ME, VanillaFix, Enhanced Block Entities, Particle Core, No Chat Lag, AI Improvements, Dynamic FPS, Memory Saver
+-sounds and music load in the background
 
--smoother chunk loading: a heavy chunk is built over a few frames instead of freezing one
-
--sounds and music load in the background instead of freezing the game, muted sounds aren't loaded
-
--Fast Ping: ping checks answered the moment they arrive
-
--FPS Reducer: lower frame rate after a while with no input
-
--server packets spread over a few frames so joining doesn't freeze
-
--TNT and zombie optimizations
-
--runs better on hot or slow computers: scoreboard and HUD only redrawn when they change, even with a menu open
-
--block-breaking cracks, shields and banners loaded before you join, so the first use doesn't freeze
-
--moving the mouse costs less while aiming, so FPS drops less when you look around
-
--optional Dynamic Resolution (off by default)
+-less freezing when joining a server
 
 ------
 
-New
+Added mods
 
--mod menu redesign: module tiles with icons, click a tile to turn it on
+-Treasure Animations
 
--Right Shift screen: freeze the game, drag your HUD, open the mods
+-Treasure Particles
 
--Treasure Animations: swing styles (Treasure, Slash, Spin, Smooth), swing speed, hit punch, draw twirl, sway
+-1.7 Animations
 
--Treasure particles: gold, rainbow, frost or ember totem pops and hit sparkles
+-Elytra Fix
 
--Elytra Fix: elytra opens the moment you press jump
+-Tier Tagger
 
--offhand swap: hover an item in your inventory and press F
+-Clear Water
 
--menu and zoom keys moved to Options, Controls, Treasure Client
+-Saturation Display
 
--Sodium-style Video Settings with every setting in one place
+-Hit Color
+
+-Offhand Swap (press F in your inventory)
+
+------
+
+Mod Menu redesign
+
+-mod tiles with icons
+
+-Right Shift screen to move your HUD
+
+-Sodium-style Video Settings
 
 -new Mods screen
-
--Tier Tagger, Clear Water, Saturation display, Hit Color
-
--1.7 Animations: sweep and sprint hits swing differently, items dip on cooldown
-
--.lag and .perf chat commands to find lag
-
--kick log (.kicklog) shows the last packets sent before a kick
 
 --------
 Fixed
 
--eating getting stuck (crumbs but no eating)
+-eating getting stuck
 
--golden apple eating
+-bows and eating on modern servers
 
--bows and eating cancelling on modern servers
+-explosion knockback
 
--explosion knockback not always applying
-
--screen randomly jumping when moving the mouse
+-screen jumping when moving the mouse
 
 -totem animation in the wrong place
 
--sprint hits looking like sweep hits in 1.7 Animations
-
--mod menu settings boxes squashed together
-
--lag that slowly built up in Duels and other minigames (block entities from reloaded maps were never removed and kept running)
+-lag building up in Duels and other minigames
 
 ------------------------------------------------------
 1.4
 
 Polish update
 
+Added mods
+
+-Reach Display
+
+-Combo Counter
+
+-Item Counter
+
+-Block Outline
+
+-Scoreboard settings
+
+-Auto Login
+
+------
+
 New
 
--New loading screen: the Treasure Client logo with a real progress bar and tips, and a burst of coins when the game is ready
+-new loading screen
 
--The game starts right away: no countdown and no "press any key" (sound turns on at your first click or key press)
+-Profiles (switch between alts)
 
--Profiles: click your face in the top right of the title screen to manage alts. Each profile has its own name, skin, cape and mod settings, and everything saves
-
--Auto Login mod: remembers the password you type in /login or /register and logs you in next time (per server, off by default)
-
--Java servers: join Java Edition servers by typing java:// before the address. Each Java server remembers its own name, and if a server wants a Microsoft account you can pick another name or sign in instead of just being kicked
-
--If a Java server kicks you for using a VPN, the screen explains why (the server sees the relay, not you) and opens the Java Servers settings so you can change the relay
-
--Reach Display: how far away your last hit landed, counting only hits the server really counted. Show it in a box or as a small white number above your crosshair
-
--Combo Counter: your hits in a row (resets when you get hit or after 3 seconds)
-
--Item Counter: arrows, ender pearls, golden apples, totems, splash potions and, if you want, blocks
-
--Scoreboard settings: hide the red numbers, resize it from 50% to 150%, and pick a normal, lighter or no background
-
--Block Outline: 10 colours, thickness, opacity and an optional see-through fill
-
---------
-Performance
-
--Less background work every frame (about 6% of the game's CPU time): the overlay, the screen refresh timer and the page-size check do much less
+-join Java Edition servers with java://
 
 --------
 Fixed
 
--Crafting with modern wood (cherry, mangrove, bamboo, crimson, warped and more) on servers
+-crafting with modern wood on servers
 
--Less view jumping right after you click back into the game or close a menu
+-view jumping after closing a menu
 
--Right Shift only opens the mod menu while you play, so it types capital letters in chat again
+-Right Shift typing capital letters in chat
+
+------------------------------------------------------
+1.5 Beta
+
+UI and cosmetics update
+
+New look
+
+-new main menu
+
+-new Mod Menu
+
+-new HUD look in your theme's colour
+
+-Sakura and Dark themes
+
+-pick any background for each theme
+
+------
+
+Cosmetics
+
+-animated capes, auras, hats and boots
+
+-the Maker: design your own
+
+-other Treasure Client players see your cosmetics
+
+------
+
+Added mods
+
+-Bobby
+
+--------
+Fixed
+
+-menus switching back to the old look
+
+-Right Shift opens the new Mod Menu
