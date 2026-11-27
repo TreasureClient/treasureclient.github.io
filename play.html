@@ -61,8 +61,8 @@
                     <p class="version-card__kind"><span class="badge">Beta</span></p>
                     <h3 class="version-card__name">Version <span class="beta-version">1.4 Beta</span></h3>
                     <div class="version-card__buttons">
-                        <a class="btn btn--primary" href="https://treasureclient.github.io/Treasure-Client-1.12-src/">Play WASM</a>
-                        <a class="btn btn--ghost" href="https://treasureclient.github.io/Treasure-Client-1.12-src/js.html">Play JS</a>
+                        <a class="btn btn--primary" href="https://treasureclient.github.io/Treasure-Client-src/">Play WASM</a>
+                        <a class="btn btn--ghost" href="https://treasureclient.github.io/Treasure-Client-src/js.html">Play JS</a>
                     </div>
                     <p class="version-card__note">The newest version before its release. May have bugs.</p>
                 </article>
@@ -96,7 +96,7 @@
             <span>·</span>
             <a href="changelog.html">Changelog</a>
             <span>·</span>
-            <a href="https://github.com/TreasureClient/Treasure-Client-1.12-src" target="_blank" rel="noopener">Source code</a>
+            <a href="https://github.com/TreasureClient/Treasure-Client-src" target="_blank" rel="noopener">Source code</a>
             <span>·</span>
             <a href="#top">Back to top</a>
         </p>
@@ -105,7 +105,7 @@
     <script>
         var RELEASE = '1.4'; // the current release; change on every release
         // Show the beta's version number (the beta site writes it on every update).
-        fetch('https://treasureclient.github.io/Treasure-Client-1.12-src/version.json', { cache: 'no-store' })
+        fetch('https://treasureclient.github.io/Treasure-Client-src/version.json', { cache: 'no-store' })
             .then(function (r) { return r.ok ? r.json() : null; })
             .then(function (info) {
                 if (!info || !info.version) return;
