@@ -195,31 +195,23 @@ Fixed
 -Right Shift typing capital letters in chat
 
 ------------------------------------------------------
-1.5 Beta
+1.5
 
 UI and cosmetics update
 
 New look
 
--new main menu
-
--new Mod Menu
-
--new HUD look in your theme's colour
+-new main menu and Mod Menu
 
 -Sakura and Dark themes
-
--pick any background for each theme
 
 ------
 
 Cosmetics
 
--animated capes, auras, hats and boots
+-capes, auras, hats and boots
 
--the Maker: design your own
-
--other Treasure Client players see your cosmetics
+-make your own in the Maker
 
 ------
 
@@ -227,9 +219,8 @@ Added mods
 
 -Bobby
 
---------
-Fixed
+------
 
--menus switching back to the old look
+New
 
--Right Shift opens the new Mod Menu
+-F2 screenshots show the menus and HUD
